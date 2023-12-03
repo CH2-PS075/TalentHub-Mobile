@@ -1,0 +1,88 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TalentHub" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorSecondary</item>
+    </style>
+
+    <style name="Theme.TalentHub" parent="Base.Theme.TalentHub">
+        <item name="thumbColor">@color/colorSecondary</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="itemRippleColor">@color/colorPrimary</item>
+        <item name="itemIconTint">@color/colorPrimary</item>
+        <item name="itemIconSize">25dp</item>
+        <item name="itemTextAppearanceActive">?attr/textAppearanceLabelMedium</item>
+        <item name="itemTextAppearanceInactive">?attr/textAppearanceLabelSmall</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_animation</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_animation</item>
+    </style>
+
+    <!--Style for EditText-->
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/shape_rectangle_rounded_gray</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="EditText.Email">
+        <item name="android:drawableStart">@drawable/ic_outline_email_24</item>
+        <item name="android:hint">@string/email_hint</item>
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="EditText.Password">
+        <item name="android:drawableStart">@drawable/ic_outline_lock_24</item>
+        <item name="android:hint">@string/password_hint</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="EditText.Username">
+        <item name="android:drawableStart">@drawable/ic_profile</item>
+        <item name="android:hint">@string/username_hint</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+    <!--End of Style for EditText-->
+
+    <!--Style for TextView-->
+    <style name="TextView" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextView.ExtraLarge" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorDark</item>
+    </style>
+
+    <style name="TextView.Small" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorDark</item>
+    </style>
+
+    <style name="TextView.ExtraSmall" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorDark</item>
+    </style>
+    <!--End of Style for TextView-->
+
+    <!--Style for Button-->
+    <style name="Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorPrimary</item>
+    </style>
+    <!--End of Style for Button-->
+
+</resources>

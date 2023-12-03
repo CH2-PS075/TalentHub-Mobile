@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">TalentHub</string>
+    <string name="icon_bag">Icon of the TalentHub</string>
+
+    <string name="action_home">Home</string>
+    <string name="action_search">Search</string>
+    <string name="action_ai">AI</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_profile">Profile</string>
+
+    <!--Welcome Page-->
+    <string name="welomce_subtitle_text">Apps that make your event more convenient. Ready to help you with your needs anytime, anywhere.</string>
+    <string name="welcome_register_text">No account yet? Sign up first</string>
+    <string name="welcome_conditions_text">You agree to the Terms of Service or Privacy Policy by logging in or registering.</string>
+
+    <!--Login & Register Page-->
+    <string name="login_text">Login</string>
+    <string name="logout_text">Logout</string>
+    <string name="register_text">Register</string>
+    <string name="welcome_title_text">Welcome to TalentHub!</string>
+    <string name="login_subtitle_text">Login or register in just a few easy steps</string>
+    <string name="email_hint">Email</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_conditions_text">I agree to TalentHub\'s Terms of Service &amp; Privacy Policy.</string>
+    <string name="signup_text">Don\'t have an account yet? Register</string>
+    <string name="signin_text">Already have an account? Log in</string>
+
+    <!--Home Page-->
+    <string name="banner_home">Banner</string>
+    <string name="account_name">Hi, %1$s</string>
+    <string name="account_name_guest">Hi, TALENTNITY!</string>
+    <string name="guest_login_text" />
+    <string name="join_talent">Join Now</string>
+    <string name="text_category">Category</string>
+    <string name="text_recommendation">Recommendation</string>
+
+    <!--Category-->
+    <string name="singer_category">Singer</string>
+    <string name="singer_cd">Singer</string>
+    <string name="music_band_category">Music Band</string>
+    <string name="music_band_cd">Music Band</string>
+    <string name="comedian_category">Comedian</string>
+    <string name="comedian_cd">Comedian</string>
+    <string name="photographer_category">Photographer</string>
+    <string name="photographer_cd">Photographer</string>
+    <string name="view_all_category">View All</string>
+    <string name="view_all_cd">View All</string>
+
+    <!--Error and success handling-->
+    <string name="error_empty_field">Can not be empty</string>
+    <string name="error_short_password">Password must not be less than 8 characters</string>
+    <string name="inaccessible_title">Inaccessible</string>
+    <string name="success_title">Success</string>
+    <string name="failed_title">Failed</string>
+    <string name="continue_title">Continue</string>
+    <string name="back_title">Back</string>
+    <string name="try_again_title">Try again</string>
+    <string name="no_session_text">Login to access this feature.</string>
+
+</resources>
