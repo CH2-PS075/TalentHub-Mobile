@@ -245,7 +245,7 @@
             android:layout_marginTop="18dp"
             android:fontFamily="@font/montserrat_semibold"
             android:gravity="start"
-            android:text="@string/text_recommendation"
+            android:text="@string/text_our_talent"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

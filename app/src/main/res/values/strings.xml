@@ -33,7 +33,7 @@
     <string name="guest_login_text" />
     <string name="join_talent">Join Now</string>
     <string name="text_category">Category</string>
-    <string name="text_recommendation">Recommendation</string>
+    <string name="text_our_talent">Our Talent</string>
 
     <!--Category-->
     <string name="singer_category">Singer</string>
