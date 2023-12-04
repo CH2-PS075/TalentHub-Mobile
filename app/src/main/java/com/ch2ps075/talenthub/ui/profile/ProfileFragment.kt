@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
 import com.ch2ps075.talenthub.R
+import com.ch2ps075.talenthub.data.preference.UserModel
 import com.ch2ps075.talenthub.databinding.FragmentProfileBinding
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
@@ -26,32 +27,45 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
+        observeSession()
+        return binding.root
+    }
 
+    private fun observeSession() {
         viewModel.getSession().observe(requireActivity()) { user ->
-            if (!user.isLogin) {
-                showAlertDialog(
-                    getString(R.string.inaccessible_title),
-                    getString(R.string.no_session_text),
-                    getString(R.string.continue_title),
-                    WelcomeActivity::class.java
-                )
-            }
+            handleSession(user)
+        }
+    }
+
+    private fun handleSession(user: UserModel) {
+        val name = if (user.isLogin) user.username else "TALENTNITY!"
+        val email = if (user.isLogin) user.email else "-"
+
+        with(binding) {
+            tvProfileName.text = resources.getString(R.string.name_profile, name)
+            tvProfileEmail.text = resources.getString(R.string.email_profile, email)
         }
 
-        return binding.root
+        if (!user.isLogin) {
+            showAlertDialog(
+                getString(R.string.inaccessible_title),
+                getString(R.string.no_session_text),
+                getString(R.string.continue_title),
+                WelcomeActivity::class.java
+            )
+        }
     }
 
     private fun showAlertDialog(
         title: String,
         message: String,
-        textButton: String,
+        positiveButtonResId: String,
         targetActivity: Class<*>? = LoginActivity::class.java,
     ) {
-        val alertDialogBuilder = AlertDialog.Builder(requireActivity())
-        alertDialogBuilder.apply {
+        AlertDialog.Builder(requireActivity()).apply {
             setTitle(title)
             setMessage(message)
-            setPositiveButton(textButton) { _, _ ->
+            setPositiveButton(positiveButtonResId) { _, _ ->
                 val intent = Intent(requireActivity(), targetActivity)
                 startActivity(intent)
                 requireActivity().finish()
@@ -59,10 +73,9 @@ class ProfileFragment : Fragment() {
             setNegativeButton(getString(R.string.back_title)) { _, _ ->
                 startActivity(Intent(requireActivity(), MainActivity::class.java))
             }
+        }.create().apply {
+            setCanceledOnTouchOutside(false)
+            show()
         }
-
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.setCanceledOnTouchOutside(false)
-        alertDialog.show()
     }
 }

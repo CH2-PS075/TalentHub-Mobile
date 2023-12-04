@@ -35,6 +35,32 @@
     <string name="text_category">Category</string>
     <string name="text_our_talent">Our Talent</string>
 
+    <!--Profile Page-->
+    <string name="top_header_profile">Top Header</string>
+    <string name="avatar_profile">Avatar Profile</string>
+    <string name="name_profile">Hi, %1$s</string>
+    <string name="email_profile">%1$s</string>
+
+    <string name="cd_help_center">Help Center icon</string>
+    <string name="hc_text">Help Center</string>
+    <string name="cd_to_hc">To Help Center</string>
+
+    <string name="cd_language">Language icon</string>
+    <string name="language_text">Language</string>
+    <string name="cd_to_language">To Language</string>
+
+    <string name="cd_tos">Terms of Services icon</string>
+    <string name="tos_text">Terms of Services</string>
+    <string name="cd_to_tos">To Terms of Services</string>
+
+    <string name="cd_pp">Privacy Policy icon</string>
+    <string name="pp_text">Privacy Policy</string>
+    <string name="cd_to_pp">To Privacy Policy</string>
+
+    <string name="cd_settings">Settings icon</string>
+    <string name="settings_text">Settings</string>
+    <string name="cd_to_settings">To Settings</string>
+
     <!--Category-->
     <string name="singer_category">Singer</string>
     <string name="singer_cd">Singer</string>
