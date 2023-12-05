@@ -15,6 +15,21 @@
         android:theme="@style/Theme.TalentHub"
         tools:targetApi="31">
         <activity
+            android:name=".ui.profile.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.terms.TermsOfServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.privacy.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.language.LanguageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.helpcenter.HelpCenterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.WelcomeActivity"
             android:exported="true" />
         <activity

@@ -44,6 +44,7 @@
     <string name="cd_help_center">Help Center icon</string>
     <string name="hc_text">Help Center</string>
     <string name="cd_to_hc">To Help Center</string>
+    <string name="cd_expand_hc">Expand the question</string>
 
     <string name="cd_language">Language icon</string>
     <string name="language_text">Language</string>
@@ -60,6 +61,7 @@
     <string name="cd_settings">Settings icon</string>
     <string name="settings_text">Settings</string>
     <string name="cd_to_settings">To Settings</string>
+    <string name="cd_backto_settings">Back to Settings</string>
 
     <!--Category-->
     <string name="singer_category">Singer</string>
@@ -83,5 +85,22 @@
     <string name="back_title">Back</string>
     <string name="try_again_title">Try again</string>
     <string name="no_session_text">Login to access this feature.</string>
+
+    <!--Help center-->
+    <string-array name="question_data">
+        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
+        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
+        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
+        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
+        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
+    </string-array>
+
+    <string-array name="answer_data">
+        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
+        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
+        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
+        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
+        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
+    </string-array>
 
 </resources>

@@ -16,6 +16,11 @@ import com.ch2ps075.talenthub.ui.WelcomeActivity
 import com.ch2ps075.talenthub.ui.login.LoginActivity
 import com.ch2ps075.talenthub.ui.main.MainActivity
 import com.ch2ps075.talenthub.ui.main.MainViewModel
+import com.ch2ps075.talenthub.ui.profile.helpcenter.HelpCenterActivity
+import com.ch2ps075.talenthub.ui.profile.language.LanguageActivity
+import com.ch2ps075.talenthub.ui.profile.privacy.PrivacyPolicyActivity
+import com.ch2ps075.talenthub.ui.profile.settings.SettingsActivity
+import com.ch2ps075.talenthub.ui.profile.terms.TermsOfServicesActivity
 
 class ProfileFragment : Fragment() {
 
@@ -28,6 +33,11 @@ class ProfileFragment : Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         observeSession()
+        binding.helpCenter.setOnClickListener { startActivity(Intent(requireActivity(), HelpCenterActivity::class.java)) }
+        binding.language.setOnClickListener { startActivity(Intent(requireActivity(), LanguageActivity::class.java)) }
+        binding.termsOfServices.setOnClickListener { startActivity(Intent(requireActivity(), TermsOfServicesActivity::class.java)) }
+        binding.privacyPolicy.setOnClickListener { startActivity(Intent(requireActivity(), PrivacyPolicyActivity::class.java)) }
+        binding.settings.setOnClickListener { startActivity(Intent(requireActivity(), SettingsActivity::class.java)) }
         return binding.root
     }
 
