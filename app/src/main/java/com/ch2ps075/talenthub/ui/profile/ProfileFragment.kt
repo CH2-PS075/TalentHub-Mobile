@@ -33,12 +33,18 @@ class ProfileFragment : Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         observeSession()
-        binding.helpCenter.setOnClickListener { startActivity(Intent(requireActivity(), HelpCenterActivity::class.java)) }
-        binding.language.setOnClickListener { startActivity(Intent(requireActivity(), LanguageActivity::class.java)) }
-        binding.termsOfServices.setOnClickListener { startActivity(Intent(requireActivity(), TermsOfServicesActivity::class.java)) }
-        binding.privacyPolicy.setOnClickListener { startActivity(Intent(requireActivity(), PrivacyPolicyActivity::class.java)) }
-        binding.settings.setOnClickListener { startActivity(Intent(requireActivity(), SettingsActivity::class.java)) }
+        setupClickListeners()
         return binding.root
+    }
+
+    private fun setupClickListeners() {
+        with(binding) {
+            helpCenter.setOnClickListener { startActivity(Intent(requireActivity(), HelpCenterActivity::class.java)) }
+            language.setOnClickListener { startActivity(Intent(requireActivity(), LanguageActivity::class.java)) }
+            termsOfServices.setOnClickListener { startActivity(Intent(requireActivity(), TermsOfServicesActivity::class.java)) }
+            privacyPolicy.setOnClickListener { startActivity(Intent(requireActivity(), PrivacyPolicyActivity::class.java)) }
+            settings.setOnClickListener { startActivity(Intent(requireActivity(), SettingsActivity::class.java)) }
+        }
     }
 
     private fun observeSession() {
