@@ -99,9 +99,10 @@ class RegisterActivity : AppCompatActivity() {
                 val intent = Intent(this@RegisterActivity, targetActivity)
                 startActivity(intent)
                 finish()
+            }.create().apply {
+                setCanceledOnTouchOutside(false)
+                show()
             }
-            create()
-            show()
         }
     }
 

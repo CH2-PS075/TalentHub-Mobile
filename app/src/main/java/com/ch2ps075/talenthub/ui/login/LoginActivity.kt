@@ -102,9 +102,10 @@ class LoginActivity : AppCompatActivity() {
                 val intent = Intent(this@LoginActivity, targetActivity)
                 startActivity(intent)
                 finish()
+            }.create().apply {
+                setCanceledOnTouchOutside(false)
+                show()
             }
-            create()
-            show()
         }
     }
 
