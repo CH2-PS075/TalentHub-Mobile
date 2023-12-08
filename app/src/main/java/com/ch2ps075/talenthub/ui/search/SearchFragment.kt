@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
 import com.ch2ps075.talenthub.R
@@ -26,43 +27,62 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
+        observeSession()
+        setupSearchView()
+        binding.tvTalentSize.text = getString(R.string.display_talent_size, "0")
+        return binding.root
+    }
 
+    private fun setupSearchView() {
+        with(binding) {
+            searchView.setupWithSearchBar(searchBar)
+            searchView.editText.setOnEditorActionListener { _, _, _ ->
+                val textSearch = searchView.text.toString()
+                searchBar.setText(textSearch)
+                searchView.hide()
+                showToast(textSearch)
+                false
+            }
+        }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(requireActivity(), message, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun observeSession() {
         viewModel.getSession().observe(requireActivity()) { user ->
             if (!user.isLogin) {
                 showAlertDialog(
-                    getString(R.string.inaccessible_title),
-                    getString(R.string.no_session_text),
-                    getString(R.string.continue_title),
+                    R.string.inaccessible_title,
+                    R.string.no_session_text,
+                    R.string.continue_title,
                     WelcomeActivity::class.java
                 )
             }
         }
-
-        return binding.root
     }
 
     private fun showAlertDialog(
-        title: String,
-        message: String,
-        textButton: String,
+        titleResId: Int,
+        messageResId: Int,
+        textButtonResId: Int,
         targetActivity: Class<*>? = LoginActivity::class.java,
     ) {
-        val alertDialogBuilder = AlertDialog.Builder(requireActivity())
-        alertDialogBuilder.apply {
-            setTitle(title)
-            setMessage(message)
-            setPositiveButton(textButton) { _, _ ->
+        AlertDialog.Builder(requireActivity()).apply {
+            setTitle(titleResId)
+            setMessage(messageResId)
+            setPositiveButton(textButtonResId) { _, _ ->
                 val intent = Intent(requireActivity(), targetActivity)
                 startActivity(intent)
                 requireActivity().finish()
             }
-            setNegativeButton(getString(R.string.back_title)) { _, _ ->
+            setNegativeButton(R.string.back_title) { _, _ ->
                 startActivity(Intent(requireActivity(), MainActivity::class.java))
             }
+        }.create().apply {
+            setCanceledOnTouchOutside(false)
+            show()
         }
-
-        val alertDialog = alertDialogBuilder.create()
-        alertDialog.setCanceledOnTouchOutside(false)
-        alertDialog.show()
     }
 }

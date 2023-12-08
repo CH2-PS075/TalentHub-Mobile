@@ -35,6 +35,10 @@
     <string name="text_category">Category</string>
     <string name="text_our_talent">Our Talent</string>
 
+    <!--Search Page-->
+    <string name="display_talent_size">Displaying %1$s talents</string>
+    <string name="search_hint">Search talent…</string>
+
     <!--Profile Page-->
     <string name="top_header_profile">Top Header</string>
     <string name="avatar_profile">Avatar Profile</string>
