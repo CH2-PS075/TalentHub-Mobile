@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.ui.main.MainActivity
 import com.ch2ps075.talenthub.R
 import com.ch2ps075.talenthub.data.preference.UserModel
@@ -67,21 +67,12 @@ class LoginActivity : AppCompatActivity() {
                                 token = result.data.loginResult.token
                             )
                         )
-                        showAlertDialog(
-                            getString(R.string.success_title),
-                            result.data.message,
-                            getString(R.string.continue_title),
-                            MainActivity::class.java
-                        )
+                        showSuccessAlert()
                         showLoading(false)
                     }
 
                     is ResultState.Error -> {
-                        showAlertDialog(
-                            getString(R.string.failed_title),
-                            result.error,
-                            getString(R.string.try_again_title)
-                        )
+                        showErrorAlert()
                         showLoading(false)
                     }
                 }
@@ -89,24 +80,26 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun showAlertDialog(
-        title: String,
-        message: String,
-        textButton: String,
-        targetActivity: Class<*>? = LoginActivity::class.java,
-    ) {
-        AlertDialog.Builder(this).apply {
-            setTitle(title)
-            setMessage(message)
-            setPositiveButton(textButton) { _, _ ->
-                val intent = Intent(this@LoginActivity, targetActivity)
-                startActivity(intent)
-                finish()
-            }.create().apply {
-                setCanceledOnTouchOutside(false)
-                show()
+    private fun showSuccessAlert() {
+        SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+            .setTitleText(getString(R.string.success_title))
+            .setContentText(getString(R.string.success_login_message))
+            .setConfirmButton(getString(R.string.continue_title)) {
+                startActivity(Intent(this, MainActivity::class.java))
             }
-        }
+            .apply { setCanceledOnTouchOutside(false) }
+            .show()
+    }
+
+    private fun showErrorAlert() {
+        SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+            .setTitleText(getString(R.string.failed_title))
+            .setContentText(getString(R.string.failed_login_message))
+            .setConfirmButton(getString(R.string.try_again_title)) {
+                it.dismissWithAnimation()
+            }
+            .apply { setCanceledOnTouchOutside(false) }
+            .show()
     }
 
     private fun showLoading(isLoading: Boolean) {

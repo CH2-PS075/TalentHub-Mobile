@@ -85,10 +85,14 @@
     <string name="inaccessible_title">Inaccessible</string>
     <string name="success_title">Success</string>
     <string name="failed_title">Failed</string>
+    <string name="failed_login_message">Sorry, incorrect username or password</string>
+    <string name="failed_register_message">Sorry, registration failed. Email is already taken</string>
+    <string name="success_login_message">Welcome back! Login successful</string>
+    <string name="success_register_message">Congratulations! Registration successful</string>
     <string name="continue_title">Continue</string>
     <string name="back_title">Back</string>
     <string name="try_again_title">Try again</string>
-    <string name="no_session_text">Login to access this feature.</string>
+    <string name="no_session_text">Login to access this feature</string>
 
     <!--Help center-->
     <string-array name="question_data">

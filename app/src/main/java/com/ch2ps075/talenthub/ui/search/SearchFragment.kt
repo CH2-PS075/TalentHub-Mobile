@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.R
 import com.ch2ps075.talenthub.databinding.FragmentSearchBinding
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
-import com.ch2ps075.talenthub.ui.login.LoginActivity
 import com.ch2ps075.talenthub.ui.main.MainActivity
 import com.ch2ps075.talenthub.ui.main.MainViewModel
 
@@ -53,36 +52,22 @@ class SearchFragment : Fragment() {
     private fun observeSession() {
         viewModel.getSession().observe(requireActivity()) { user ->
             if (!user.isLogin) {
-                showAlertDialog(
-                    R.string.inaccessible_title,
-                    R.string.no_session_text,
-                    R.string.continue_title,
-                    WelcomeActivity::class.java
-                )
+                showWarningAlert()
             }
         }
     }
 
-    private fun showAlertDialog(
-        titleResId: Int,
-        messageResId: Int,
-        textButtonResId: Int,
-        targetActivity: Class<*>? = LoginActivity::class.java,
-    ) {
-        AlertDialog.Builder(requireActivity()).apply {
-            setTitle(titleResId)
-            setMessage(messageResId)
-            setPositiveButton(textButtonResId) { _, _ ->
-                val intent = Intent(requireActivity(), targetActivity)
-                startActivity(intent)
-                requireActivity().finish()
+    private fun showWarningAlert() {
+        SweetAlertDialog(requireActivity(), SweetAlertDialog.WARNING_TYPE)
+            .setTitleText(getString(R.string.inaccessible_title))
+            .setContentText(getString(R.string.no_session_text))
+            .setConfirmButton(getString(R.string.login_text)) {
+                startActivity(Intent(requireActivity(), WelcomeActivity::class.java))
             }
-            setNegativeButton(R.string.back_title) { _, _ ->
+            .setCancelButton(getString(R.string.back_title)) {
                 startActivity(Intent(requireActivity(), MainActivity::class.java))
             }
-        }.create().apply {
-            setCanceledOnTouchOutside(false)
-            show()
-        }
+            .apply { setCanceledOnTouchOutside(false) }
+            .show()
     }
 }
