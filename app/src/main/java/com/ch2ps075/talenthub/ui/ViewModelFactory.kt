@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.repo.AuthRepository
 import com.ch2ps075.talenthub.injection.Injection
-import com.ch2ps075.talenthub.ui.login.LoginViewModel
+import com.ch2ps075.talenthub.ui.auth.login.LoginViewModel
 import com.ch2ps075.talenthub.ui.main.MainViewModel
 import com.ch2ps075.talenthub.ui.profile.language.LanguageViewModel
-import com.ch2ps075.talenthub.ui.register.RegisterViewModel
+import com.ch2ps075.talenthub.ui.auth.register.RegisterViewModel
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory private constructor(

@@ -17,7 +17,7 @@ import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.FragmentHomeBinding
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
-import com.ch2ps075.talenthub.ui.login.LoginActivity
+import com.ch2ps075.talenthub.ui.auth.login.LoginActivity
 import com.ch2ps075.talenthub.ui.main.MainViewModel
 
 class HomeFragment : Fragment() {

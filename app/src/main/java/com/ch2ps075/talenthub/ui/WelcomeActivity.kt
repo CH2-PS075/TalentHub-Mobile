@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ch2ps075.talenthub.databinding.ActivityWelcomeBinding
-import com.ch2ps075.talenthub.ui.login.LoginActivity
-import com.ch2ps075.talenthub.ui.register.RegisterActivity
+import com.ch2ps075.talenthub.ui.auth.login.LoginActivity
+import com.ch2ps075.talenthub.ui.auth.register.RegisterActivity
 
 class WelcomeActivity : AppCompatActivity() {
 

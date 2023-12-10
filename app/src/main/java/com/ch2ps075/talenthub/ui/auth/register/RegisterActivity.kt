@@ -1,4 +1,4 @@
-package com.ch2ps075.talenthub.ui.register
+package com.ch2ps075.talenthub.ui.auth.register
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +12,7 @@ import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.ActivityRegisterBinding
 import com.ch2ps075.talenthub.state.ResultState
 import com.ch2ps075.talenthub.ui.ViewModelFactory
-import com.ch2ps075.talenthub.ui.login.LoginActivity
+import com.ch2ps075.talenthub.ui.auth.login.LoginActivity
 
 class RegisterActivity : AppCompatActivity() {
 

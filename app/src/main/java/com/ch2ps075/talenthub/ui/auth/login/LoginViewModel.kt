@@ -1,4 +1,4 @@
-package com.ch2ps075.talenthub.ui.login
+package com.ch2ps075.talenthub.ui.auth.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

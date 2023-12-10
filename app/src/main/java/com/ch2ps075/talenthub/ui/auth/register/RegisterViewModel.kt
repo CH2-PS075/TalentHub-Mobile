@@ -1,4 +1,4 @@
-package com.ch2ps075.talenthub.ui.register
+package com.ch2ps075.talenthub.ui.auth.register
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

@@ -9,6 +9,7 @@
     <string name="register_text">Daftar</string>
     <string name="welcome_title_text">Selamat Datang di TalentHub!</string>
     <string name="login_subtitle_text">Masuk atau daftar hanya dalam beberapa langkah mudah</string>
+    <string name="invalid_email">Format email tidak valid. Mohon masukkan alamat email yang benar</string>
     <string name="username_hint">Nama pengguna</string>
     <string name="password_hint">Kata sandi</string>
     <string name="welcome_conditions_text">Anda menyetujui Persyaratan Layanan atau Kebijakan Privasi dengan masuk atau mendaftar.</string>

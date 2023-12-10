@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".ui.auth.login.LoginActivity">
 
     <ImageView
         android:id="@+id/icon_bag"
@@ -72,7 +72,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/usernameEditTextLayout">
 
-        <EditText
+        <com.ch2ps075.talenthub.ui.auth.customview.EmailEditText
             android:id="@+id/ed_register_email"
             style="@style/EditText.Email"
             android:layout_width="match_parent"
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailEditTextLayout">
 
-        <EditText
+        <com.ch2ps075.talenthub.ui.auth.customview.PasswordEditText
             android:id="@+id/ed_register_password"
             style="@style/EditText.Password"
             android:layout_width="match_parent"
@@ -152,7 +152,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
-    </ProgressBar>
+        tools:visibility="visible"></ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

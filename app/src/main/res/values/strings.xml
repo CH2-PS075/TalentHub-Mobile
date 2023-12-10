@@ -20,6 +20,7 @@
     <string name="welcome_title_text">Welcome to TalentHub!</string>
     <string name="login_subtitle_text">Login or register in just a few easy steps</string>
     <string name="email_hint" translatable="false">Email</string>
+    <string name="invalid_email">The email format is invalid. Please enter a valid email address</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_conditions_text">I agree to TalentHub\'s Terms of Service &amp; Privacy Policy.</string>
