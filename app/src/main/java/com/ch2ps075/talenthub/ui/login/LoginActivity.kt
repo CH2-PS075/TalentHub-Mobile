@@ -8,7 +8,9 @@ import androidx.activity.viewModels
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.ui.main.MainActivity
 import com.ch2ps075.talenthub.R
+import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.preference.UserModel
+import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.ActivityLoginBinding
 import com.ch2ps075.talenthub.state.ResultState
 import com.ch2ps075.talenthub.ui.ViewModelFactory
@@ -19,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
     private val viewModel by viewModels<LoginViewModel> {
-        ViewModelFactory.getInstance(this)
+        ViewModelFactory.getInstance(this, LanguagePreferences.getInstance(this.languageDataStore))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -16,26 +16,38 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.ch2ps075.talenthub.R
+import com.ch2ps075.talenthub.data.preference.LanguagePreferences
+import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.ActivityMainBinding
+import com.ch2ps075.talenthub.helper.LanguageUtil
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.ai.AiFragment
 import com.ch2ps075.talenthub.ui.favorite.FavoriteFragment
 import com.ch2ps075.talenthub.ui.home.HomeFragment
 import com.ch2ps075.talenthub.ui.profile.ProfileFragment
+import com.ch2ps075.talenthub.ui.profile.language.LanguageViewModel
 import com.ch2ps075.talenthub.ui.search.SearchFragment
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val viewModel by viewModels<MainViewModel> {
-        ViewModelFactory.getInstance(this)
+    private val mainViewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(this, LanguagePreferences.getInstance(this.languageDataStore))
+    }
+
+    private val languageViewModel by viewModels<LanguageViewModel> {
+        ViewModelFactory.getInstance(this, LanguagePreferences.getInstance(this.languageDataStore))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        languageViewModel.getLanguageSetting().observe(this) { languageCode ->
+            applyLanguage(languageCode)
+        }
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
@@ -103,6 +115,10 @@ class MainActivity : AppCompatActivity() {
         checkUserLogin()
     }
 
+    private fun applyLanguage(languageCode: String) {
+        LanguageUtil.setLocale(this, languageCode)
+    }
+
     private fun setCurrentFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fl_fragment, fragment)
@@ -122,13 +138,13 @@ class MainActivity : AppCompatActivity() {
 
         actionGallery.setOnClickListener {
             dialog.dismiss()
-            Toast.makeText(this@MainActivity, "Upload a Video is clicked", Toast.LENGTH_SHORT)
+            Toast.makeText(this@MainActivity, "Gallery clicked", Toast.LENGTH_SHORT)
                 .show()
         }
 
         actionCamera.setOnClickListener {
             dialog.dismiss()
-            Toast.makeText(this@MainActivity, "Create a short is Clicked", Toast.LENGTH_SHORT)
+            Toast.makeText(this@MainActivity, "Camera clicked", Toast.LENGTH_SHORT)
                 .show()
         }
 
@@ -149,7 +165,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkUserLogin() {
-        viewModel.getSession().observe(this) { user ->
+        mainViewModel.getSession().observe(this) { user ->
             if (user.isLogin) {
                 Toast.makeText(this, "Welcome to TalentHub!", Toast.LENGTH_SHORT).show()
             }

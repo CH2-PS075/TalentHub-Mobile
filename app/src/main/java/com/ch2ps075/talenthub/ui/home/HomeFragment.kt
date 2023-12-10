@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.R
 import com.ch2ps075.talenthub.ui.adapter.TalentAdapter
 import com.ch2ps075.talenthub.data.local.Talent
+import com.ch2ps075.talenthub.data.preference.LanguagePreferences
+import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.FragmentHomeBinding
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
@@ -21,7 +24,9 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val talentAdapter = TalentAdapter()
-    private val viewModel by viewModels<MainViewModel> { ViewModelFactory.getInstance(requireContext()) }
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(requireContext(), LanguagePreferences.getInstance(requireContext().languageDataStore))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,13 +61,11 @@ class HomeFragment : Fragment() {
     private fun observeSession() {
         viewModel.getSession().observe(requireActivity()) { user ->
             binding.tvStateIsloginOrlogout.setOnClickListener {
-                val targetClass = if (user.isLogin) {
-                    viewModel.logout()
-                    LoginActivity::class.java
+                if (user.isLogin) {
+                    showWarningAlert()
                 } else {
-                    WelcomeActivity::class.java
+                    startActivity(Intent(requireActivity(), WelcomeActivity::class.java))
                 }
-                startActivity(Intent(requireActivity(), targetClass))
             }
 
             val name = if (user.isLogin) user.username else "TALENTNITY!"
@@ -71,5 +74,18 @@ class HomeFragment : Fragment() {
             binding.tvName.text = resources.getString(R.string.account_name, name)
             binding.tvStateIsloginOrlogout.text = resources.getString(loginTextRes)
         }
+    }
+
+    private fun showWarningAlert() {
+        SweetAlertDialog(requireActivity(), SweetAlertDialog.WARNING_TYPE)
+            .setTitleText(getString(R.string.logout_text))
+            .setContentText(getString(R.string.logout_confirm_text))
+            .setConfirmButton(getString(R.string.logout_text)) {
+                viewModel.logout()
+                startActivity(Intent(requireActivity(), LoginActivity::class.java))
+            }
+            .setCancelButton(getString(R.string.back_title)) { it.dismissWithAnimation() }
+            .apply { setCanceledOnTouchOutside(false) }
+            .show()
     }
 }

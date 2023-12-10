@@ -7,6 +7,8 @@ import android.view.View
 import androidx.activity.viewModels
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.R
+import com.ch2ps075.talenthub.data.preference.LanguagePreferences
+import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.ActivityRegisterBinding
 import com.ch2ps075.talenthub.state.ResultState
 import com.ch2ps075.talenthub.ui.ViewModelFactory
@@ -17,7 +19,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
     private val viewModel by viewModels<RegisterViewModel> {
-        ViewModelFactory.getInstance(this)
+        ViewModelFactory.getInstance(this, LanguagePreferences.getInstance(this.languageDataStore))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

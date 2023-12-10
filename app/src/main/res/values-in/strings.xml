@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TalentHub</string>
+    <string name="text_our_talent">Talent Kami</string>
+    <string name="welomce_subtitle_text">Aplikasi yang membuat acara kamu lebih nyaman. Siap membantu kebutuhan kamu kapan saja, di mana saja.</string>
+    <string name="welcome_register_text">Belum punya akun? Daftar dulu</string>
+    <string name="login_text">Masuk</string>
+    <string name="logout_text">Keluar</string>
+    <string name="register_text">Daftar</string>
+    <string name="welcome_title_text">Selamat Datang di TalentHub!</string>
+    <string name="login_subtitle_text">Masuk atau daftar hanya dalam beberapa langkah mudah</string>
+    <string name="username_hint">Nama pengguna</string>
+    <string name="password_hint">Kata sandi</string>
+    <string name="welcome_conditions_text">Anda menyetujui Persyaratan Layanan atau Kebijakan Privasi dengan masuk atau mendaftar.</string>
+    <string name="login_conditions_text">Saya menyetujui Ketentuan Layanan &amp; Kebijakan Privasi TalentHub.</string>
+    <string name="signup_text">Belum memiliki akun? Daftar</string>
+    <string name="signin_text">Sudah memiliki akun? Masuk</string>
+    <string name="join_talent">Gabung Sekarang</string>
+    <string name="text_category">Kategori</string>
+    <string name="display_talent_size">Menampilkan %1$s talent</string>
+    <string name="language_text">Pengaturan Bahasa</string>
+    <string name="error_empty_field">Tidak boleh kosong</string>
+    <string name="error_short_password">Kata sandi tidak boleh kurang dari 8 karakter</string>
+    <string name="inaccessible_title">Tidak bisa diakses</string>
+    <string name="success_title">Sukses</string>
+    <string name="failed_title">Gagal</string>
+    <string name="failed_login_message">Maaf, nama pengguna atau kata sandi salah</string>
+    <string name="failed_register_message">Maaf, pendaftaran gagal. Email sudah pernah dipakai</string>
+    <string name="success_login_message">Selamat datang kembali! Login berhasil</string>
+    <string name="success_register_message">Selamat! Pendaftaran kamu berhasil</string>
+    <string name="continue_title">Lanjut</string>
+    <string name="back_title">Kembali</string>
+    <string name="try_again_title">Coba lagi</string>
+    <string name="no_session_text">Masuk untuk mengakses fitur ini</string>
+    <string name="search_hint">Cari talent…</string>
+    <string name="hc_text">Pusat Bantuan</string>
+    <string name="tos_text">Ketentuan Layanan</string>
+    <string name="pp_text">Kebijakan Privasi</string>
+    <string name="settings_text">Pengaturan</string>
+    <string name="singer_category">Penyanyi</string>
+    <string name="music_band_category">Musik Band</string>
+    <string name="comedian_category">Komedian</string>
+    <string name="photographer_category">Fotographer</string>
+    <string name="view_all_category">Lihat semua</string>
+    <string name="logout_confirm_text">Apakah kamu yakin ingin keluar?</string>
+</resources>

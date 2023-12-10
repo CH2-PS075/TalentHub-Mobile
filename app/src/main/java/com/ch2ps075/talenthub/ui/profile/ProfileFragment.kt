@@ -9,7 +9,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.R
+import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.preference.UserModel
+import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.FragmentProfileBinding
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
@@ -24,7 +26,9 @@ import com.ch2ps075.talenthub.ui.profile.terms.TermsOfServicesActivity
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
-    private val viewModel by viewModels<MainViewModel> { ViewModelFactory.getInstance(requireContext()) }
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(requireContext(), LanguagePreferences.getInstance(requireContext().languageDataStore))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

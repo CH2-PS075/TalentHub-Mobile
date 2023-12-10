@@ -3,15 +3,18 @@ package com.ch2ps075.talenthub.ui
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.repo.AuthRepository
 import com.ch2ps075.talenthub.injection.Injection
 import com.ch2ps075.talenthub.ui.login.LoginViewModel
 import com.ch2ps075.talenthub.ui.main.MainViewModel
+import com.ch2ps075.talenthub.ui.profile.language.LanguageViewModel
 import com.ch2ps075.talenthub.ui.register.RegisterViewModel
 import java.lang.IllegalArgumentException
 
 class ViewModelFactory private constructor(
     private val authRepository: AuthRepository,
+    private val languagePreferences: LanguagePreferences,
 ) : ViewModelProvider.NewInstanceFactory() {
 
     @Suppress("UNCHECKED_CAST")
@@ -29,6 +32,10 @@ class ViewModelFactory private constructor(
                 MainViewModel(authRepository) as T
             }
 
+            modelClass.isAssignableFrom(LanguageViewModel::class.java) -> {
+                LanguageViewModel(languagePreferences) as T
+            }
+
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }
@@ -36,9 +43,13 @@ class ViewModelFactory private constructor(
     companion object {
         @Volatile
         private var instance: ViewModelFactory? = null
-        fun getInstance(context: Context): ViewModelFactory = instance ?: synchronized(this) {
+        fun getInstance(
+            context: Context,
+            languagePreferences: LanguagePreferences
+        ): ViewModelFactory = instance ?: synchronized(this) {
             instance ?: ViewModelFactory(
-                Injection.provideAuthRepository(context)
+                Injection.provideAuthRepository(context),
+                LanguagePreferences.getInstance(languagePreferences.dataStore)
             )
         }.also { instance = it }
     }

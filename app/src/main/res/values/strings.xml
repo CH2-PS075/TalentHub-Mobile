@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">TalentHub</string>
-    <string name="icon_bag">Icon of the TalentHub</string>
+    <string name="icon_bag" translatable="false">Icon of the TalentHub</string>
 
-    <string name="action_home">Home</string>
-    <string name="action_search">Search</string>
-    <string name="action_ai">AI</string>
-    <string name="action_favorite">Favorite</string>
-    <string name="action_profile">Profile</string>
+    <string name="action_home" translatable="false">Home</string>
+    <string name="action_search" translatable="false">Search</string>
+    <string name="action_ai" translatable="false">AI</string>
+    <string name="action_favorite" translatable="false">Favorite</string>
+    <string name="action_profile" translatable="false">Profile</string>
 
     <!--Welcome Page-->
     <string name="welomce_subtitle_text">Apps that make your event more convenient. Ready to help you with your needs anytime, anywhere.</string>
@@ -19,7 +19,7 @@
     <string name="register_text">Register</string>
     <string name="welcome_title_text">Welcome to TalentHub!</string>
     <string name="login_subtitle_text">Login or register in just a few easy steps</string>
-    <string name="email_hint">Email</string>
+    <string name="email_hint" translatable="false">Email</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_conditions_text">I agree to TalentHub\'s Terms of Service &amp; Privacy Policy.</string>
@@ -27,10 +27,10 @@
     <string name="signin_text">Already have an account? Log in</string>
 
     <!--Home Page-->
-    <string name="banner_home">Banner</string>
-    <string name="account_name">Hi, %1$s</string>
-    <string name="account_name_guest">Hi, TALENTNITY!</string>
-    <string name="guest_login_text" />
+    <string name="banner_home" translatable="false">Banner</string>
+    <string name="account_name" translatable="false">Hi, %1$s</string>
+    <string name="account_name_guest" translatable="false">Hi, TALENTNITY!</string>
+    <string name="guest_login_text" translatable="false" />
     <string name="join_talent">Join Now</string>
     <string name="text_category">Category</string>
     <string name="text_our_talent">Our Talent</string>
@@ -40,44 +40,44 @@
     <string name="search_hint">Search talent…</string>
 
     <!--Profile Page-->
-    <string name="top_header_profile">Top Header</string>
-    <string name="avatar_profile">Avatar Profile</string>
-    <string name="name_profile">Hi, %1$s</string>
-    <string name="email_profile">%1$s</string>
+    <string name="top_header_profile" translatable="false">Top Header</string>
+    <string name="avatar_profile" translatable="false">Avatar Profile</string>
+    <string name="name_profile" translatable="false">Hi, %1$s</string>
+    <string name="email_profile" translatable="false">%1$s</string>
 
-    <string name="cd_help_center">Help Center icon</string>
+    <string name="cd_help_center" translatable="false">Help Center icon</string>
     <string name="hc_text">Help Center</string>
-    <string name="cd_to_hc">To Help Center</string>
-    <string name="cd_expand_hc">Expand the question</string>
+    <string name="cd_to_hc" translatable="false">To Help Center</string>
+    <string name="cd_expand_hc" translatable="false">Expand the question</string>
 
-    <string name="cd_language">Language icon</string>
+    <string name="cd_language" translatable="false">Language icon</string>
     <string name="language_text">Language</string>
-    <string name="cd_to_language">To Language</string>
+    <string name="cd_to_language" translatable="false">To Language</string>
 
-    <string name="cd_tos">Terms of Services icon</string>
+    <string name="cd_tos" translatable="false">Terms of Services icon</string>
     <string name="tos_text">Terms of Services</string>
-    <string name="cd_to_tos">To Terms of Services</string>
+    <string name="cd_to_tos" translatable="false">To Terms of Services</string>
 
-    <string name="cd_pp">Privacy Policy icon</string>
+    <string name="cd_pp" translatable="false">Privacy Policy icon</string>
     <string name="pp_text">Privacy Policy</string>
-    <string name="cd_to_pp">To Privacy Policy</string>
+    <string name="cd_to_pp" translatable="false">To Privacy Policy</string>
 
-    <string name="cd_settings">Settings icon</string>
+    <string name="cd_settings" translatable="false">Settings icon</string>
     <string name="settings_text">Settings</string>
-    <string name="cd_to_settings">To Settings</string>
-    <string name="cd_backto_settings">Back to Settings</string>
+    <string name="cd_to_settings" translatable="false">To Settings</string>
+    <string name="cd_backto_settings" translatable="false">Back to Settings</string>
 
     <!--Category-->
     <string name="singer_category">Singer</string>
-    <string name="singer_cd">Singer</string>
+    <string name="singer_cd" translatable="false">Singer</string>
     <string name="music_band_category">Music Band</string>
-    <string name="music_band_cd">Music Band</string>
+    <string name="music_band_cd" translatable="false">Music Band</string>
     <string name="comedian_category">Comedian</string>
-    <string name="comedian_cd">Comedian</string>
+    <string name="comedian_cd" translatable="false">Comedian</string>
     <string name="photographer_category">Photographer</string>
-    <string name="photographer_cd">Photographer</string>
+    <string name="photographer_cd" translatable="false">Photographer</string>
     <string name="view_all_category">View All</string>
-    <string name="view_all_cd">View All</string>
+    <string name="view_all_cd" translatable="false">View All</string>
 
     <!--Error and success handling-->
     <string name="error_empty_field">Can not be empty</string>
@@ -93,6 +93,7 @@
     <string name="back_title">Back</string>
     <string name="try_again_title">Try again</string>
     <string name="no_session_text">Login to access this feature</string>
+    <string name="logout_confirm_text">Are you sure you want to logout?</string>
 
     <!--Help center-->
     <string-array name="question_data">
@@ -110,5 +111,11 @@
         <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
         <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
     </string-array>
+
+    <!--Language setting-->
+    <string name="english_option" translatable="false">English</string>
+    <string name="indonesia_option" translatable="false">Bahasa Indonesia</string>
+    <string name="cd_english_selected" translatable="false">Selected English</string>
+    <string name="cd_indonesia_selected" translatable="false">Selected Bahasa Indonesia</string>
 
 </resources>
