@@ -72,7 +72,7 @@ dependencies {
     // Sweet alert & lottie animation
     implementation ("com.github.f0ris.sweetalert:library:1.6.2")
     implementation ("com.airbnb.android:lottie:6.2.0")
-    
+
     // Unit testing
     testImplementation("junit:junit:4.13.2")
 
