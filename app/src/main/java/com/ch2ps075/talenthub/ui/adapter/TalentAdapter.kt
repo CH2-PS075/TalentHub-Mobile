@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.ch2ps075.talenthub.data.local.Talent
 import com.ch2ps075.talenthub.databinding.ItemRowTalentBinding
+import com.ch2ps075.talenthub.helper.loadImage
 
 class TalentAdapter : ListAdapter<Talent, TalentAdapter.ViewHolder>(TalentDiffCallback()) {
 
@@ -18,10 +18,7 @@ class TalentAdapter : ListAdapter<Talent, TalentAdapter.ViewHolder>(TalentDiffCa
             binding.tvItemName.text = talent.name
             binding.tvItemCategory.text = talent.category
             binding.tvItemLocation.text = talent.location
-            Glide.with(itemView.context)
-                .load(talent.img)
-                .skipMemoryCache(true)
-                .into(binding.ivItemPhoto)
+            binding.ivItemPhoto.loadImage(talent.img)
         }
     }
 
@@ -32,7 +29,9 @@ class TalentAdapter : ListAdapter<Talent, TalentAdapter.ViewHolder>(TalentDiffCa
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val talent = getItem(position)
-        holder.bind(talent)
+        if (talent != null) {
+            holder.bind(talent)
+        }
     }
 }
 

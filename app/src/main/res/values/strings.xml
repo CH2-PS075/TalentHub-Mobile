@@ -40,6 +40,10 @@
     <string name="display_talent_size">Displaying %1$s talents</string>
     <string name="search_hint">Search talent…</string>
 
+    <!--Favorite Page-->
+    <string name="favorite_text">Favorite Talent</string>
+    <string name="empty_favorite">No Favorites</string>
+
     <!--Profile Page-->
     <string name="top_header_profile" translatable="false">Top Header</string>
     <string name="avatar_profile" translatable="false">Avatar Profile</string>

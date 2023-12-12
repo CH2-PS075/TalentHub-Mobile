@@ -44,4 +44,6 @@
     <string name="photographer_category">Fotographer</string>
     <string name="view_all_category">Lihat semua</string>
     <string name="logout_confirm_text">Apakah kamu yakin ingin keluar?</string>
+    <string name="favorite_text">Talent Favorit</string>
+    <string name="empty_favorite">Belum ada favorit</string>
 </resources>
