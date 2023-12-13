@@ -64,9 +64,9 @@ class LoginActivity : AppCompatActivity() {
                     is ResultState.Success -> {
                         viewModel.saveSession(
                             UserModel(
-                                username = result.data.loginResult.name,
+                                username = result.data.username,
                                 email = email,
-                                token = result.data.loginResult.token
+                                token = result.data.token
                             )
                         )
                         showSuccessAlert()

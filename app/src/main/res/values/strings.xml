@@ -22,6 +22,9 @@
     <string name="email_hint" translatable="false">Email</string>
     <string name="invalid_email">The email format is invalid. Please enter a valid email address</string>
     <string name="username_hint">Username</string>
+    <string name="fullname_hint">Full Name</string>
+    <string name="address_hint">Address</string>
+    <string name="contact_hint">Contact</string>
     <string name="password_hint">Password</string>
     <string name="login_conditions_text">I agree to TalentHub\'s Terms of Service &amp; Privacy Policy.</string>
     <string name="signup_text">Don\'t have an account yet? Register</string>

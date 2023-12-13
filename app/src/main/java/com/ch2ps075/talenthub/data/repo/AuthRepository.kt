@@ -30,13 +30,16 @@ class AuthRepository private constructor(
 
     fun register(
         username: String,
+        fullName: String,
+        address: String,
+        contact: String,
         email: String,
         password: String,
     ): LiveData<ResultState<Any>> {
         return liveData {
             emit(ResultState.Loading)
             try {
-                val successResponse = apiService.register(username, email, password).message
+                val successResponse = apiService.register(username, fullName, address, contact, email, password).message
                 emit(ResultState.Success(successResponse))
             } catch (e: HttpException) {
                 val jsonInString = e.response()?.errorBody()?.string()

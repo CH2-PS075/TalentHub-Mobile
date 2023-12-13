@@ -34,6 +34,18 @@ class RegisterActivity : AppCompatActivity() {
                         edRegisterUsername.error = getString(R.string.error_empty_field)
                     }
 
+                    edRegisterFullname.text.toString().isEmpty() -> {
+                        edRegisterFullname.error = getString(R.string.error_empty_field)
+                    }
+
+                    edRegisterAddress.text.toString().isEmpty() -> {
+                        edRegisterAddress.error = getString(R.string.error_empty_field)
+                    }
+
+                    edRegisterContact.text.toString().isEmpty() -> {
+                        edRegisterContact.error = getString(R.string.error_empty_field)
+                    }
+
                     edRegisterEmail.text.toString().isEmpty() -> {
                         edRegisterEmail.error = getString(R.string.error_empty_field)
                     }
@@ -53,30 +65,36 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun register() {
-        val username = binding.edRegisterUsername.text.toString()
-        val email = binding.edRegisterEmail.text.toString()
-        val password = binding.edRegisterPassword.text.toString()
 
-        viewModel.register(username, email, password)
-            .observe(this@RegisterActivity) { result ->
-                if (result != null) {
-                    when (result) {
-                        is ResultState.Loading -> {
-                            showLoading(true)
-                        }
+        with(binding) {
+            val username = edRegisterUsername.text.toString()
+            val fullName = edRegisterFullname.text.toString()
+            val address = edRegisterAddress.text.toString()
+            val contact = edRegisterContact.text.toString()
+            val email = edRegisterEmail.text.toString()
+            val password = edRegisterPassword.text.toString()
 
-                        is ResultState.Success -> {
-                            showSuccessAlert()
-                            showLoading(false)
-                        }
+            viewModel.register(username, fullName, address, contact, email, password)
+                .observe(this@RegisterActivity) { result ->
+                    if (result != null) {
+                        when (result) {
+                            is ResultState.Loading -> {
+                                showLoading(true)
+                            }
 
-                        is ResultState.Error -> {
-                            showErrorAlert()
-                            showLoading(false)
+                            is ResultState.Success -> {
+                                showSuccessAlert()
+                                showLoading(false)
+                            }
+
+                            is ResultState.Error -> {
+                                showErrorAlert()
+                                showLoading(false)
+                            }
                         }
                     }
                 }
-            }
+        }
     }
 
     private fun showSuccessAlert() {

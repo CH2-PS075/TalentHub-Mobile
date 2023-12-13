@@ -46,4 +46,7 @@
     <string name="logout_confirm_text">Apakah kamu yakin ingin keluar?</string>
     <string name="favorite_text">Talent Favorit</string>
     <string name="empty_favorite">Belum ada favorit</string>
+    <string name="fullname_hint">Nama Lengkap</string>
+    <string name="address_hint">Alamat</string>
+    <string name="contact_hint">Kontak</string>
 </resources>

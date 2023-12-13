@@ -8,6 +8,8 @@ android {
     namespace = "com.ch2ps075.talenthub"
     compileSdk = 34
 
+    val talentHub: String? by project
+
     defaultConfig {
         applicationId = "com.ch2ps075.talenthub"
         minSdk = 24
@@ -16,6 +18,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "TALENT_HUB", "\"${talentHub ?: "default_value"}\"")
     }
 
     buildTypes {
@@ -71,8 +74,8 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 
     // Sweet alert & lottie animation
-    implementation ("com.github.f0ris.sweetalert:library:1.6.2")
-    implementation ("com.airbnb.android:lottie:6.2.0")
+    implementation("com.github.f0ris.sweetalert:library:1.6.2")
+    implementation("com.airbnb.android:lottie:6.2.0")
 
     // Unit testing
     testImplementation("junit:junit:4.13.2")

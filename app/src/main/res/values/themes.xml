@@ -53,6 +53,24 @@
         <item name="android:hint">@string/username_hint</item>
         <item name="android:inputType">textPersonName</item>
     </style>
+
+    <style name="EditText.FullName">
+        <item name="android:drawableStart">@drawable/ic_profile</item>
+        <item name="android:hint">@string/fullname_hint</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="EditText.Address">
+        <item name="android:drawableStart">@drawable/ic_home</item>
+        <item name="android:hint">@string/address_hint</item>
+        <item name="android:inputType">textPostalAddress</item>
+    </style>
+
+    <style name="EditText.Contact">
+        <item name="android:drawableStart">@drawable/ic_contact</item>
+        <item name="android:hint">@string/contact_hint</item>
+        <item name="android:inputType">number</item>
+    </style>
     <!--End of Style for EditText-->
 
     <!--Style for TextView-->
