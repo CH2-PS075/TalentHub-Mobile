@@ -1,16 +1,24 @@
 package com.ch2ps075.talenthub.ui.category
 
+import android.content.Context
+import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.ch2ps075.talenthub.ui.category.CategoryActivity.Companion.TAB_CATEGORY_TITLES
 
 class SectionsPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
 
+    private val context: Context = activity
+
     override fun createFragment(position: Int): Fragment {
-        return SectionPagerFragment()
+        val fragment = SectionPagerFragment()
+        fragment.arguments = Bundle().apply {
+            putInt(SectionPagerFragment.ARG_POSITION, position + 1)
+            putString(SectionPagerFragment.ARG_NAME, context.getString(TAB_CATEGORY_TITLES[position]))
+        }
+        return fragment
     }
 
-    override fun getItemCount(): Int {
-        return 10
-    }
+    override fun getItemCount() = 3
 }

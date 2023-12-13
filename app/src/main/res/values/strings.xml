@@ -123,4 +123,11 @@
     <string name="cd_english_selected" translatable="false">Selected English</string>
     <string name="cd_indonesia_selected" translatable="false">Selected Bahasa Indonesia</string>
 
+    <!--Category Tab Layout-->
+    <string name="tab_text_1" translatable="false">Home</string>
+    <string name="tab_text_2" translatable="false">Profile</string>
+    <string name="tab_text_3" translatable="false">Setting</string>
+    <string name="content_tab_text" translatable="false">This is tab %1$d</string>
+    <string name="content_name_tab_text" translatable="false">This is section of %1$s</string>
+
 </resources>
