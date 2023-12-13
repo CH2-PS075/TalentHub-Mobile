@@ -29,8 +29,12 @@ class AiFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentAiBinding.inflate(inflater, container, false)
-        observeSession()
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        observeSession()
     }
 
     private fun observeSession() {

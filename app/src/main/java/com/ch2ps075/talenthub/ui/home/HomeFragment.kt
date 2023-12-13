@@ -35,10 +35,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
         observeSession()
         binding.viewAllCategory.setOnClickListener { startActivity(Intent(requireActivity(), CategoryActivity::class.java)) }
-        return binding.root
     }
 
     private fun initRecyclerView() {

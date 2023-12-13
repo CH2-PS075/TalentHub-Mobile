@@ -31,10 +31,14 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         observeSession()
         setupSearchView()
         binding.tvTalentSize.text = getString(R.string.display_talent_size, "0")
-        return binding.root
     }
 
     private fun setupSearchView() {

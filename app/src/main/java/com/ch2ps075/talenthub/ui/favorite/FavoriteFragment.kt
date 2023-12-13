@@ -34,9 +34,13 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentFavoriteBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         observeSession()
         initRecyclerView()
-        return binding.root
     }
 
     private fun initRecyclerView() {
