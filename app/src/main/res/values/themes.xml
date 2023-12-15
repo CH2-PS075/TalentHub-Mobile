@@ -71,6 +71,19 @@
         <item name="android:hint">@string/contact_hint</item>
         <item name="android:inputType">number</item>
     </style>
+
+    <style name="EditText.ProfileUsername">
+        <item name="android:drawableStart">@drawable/ic_profile</item>
+        <item name="android:radius">1dp</item>
+    </style>
+
+    <style name="EditText.ProfileContact">
+        <item name="android:drawableStart">@drawable/ic_contact</item>
+    </style>
+
+    <style name="EditText.ProfileAddress">
+        <item name="android:drawableStart">@drawable/ic_home</item>
+    </style>
     <!--End of Style for EditText-->
 
     <!--Style for TextView-->

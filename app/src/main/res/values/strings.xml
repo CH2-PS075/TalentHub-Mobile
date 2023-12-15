@@ -133,4 +133,11 @@
     <string name="content_tab_text" translatable="false">This is tab %1$d</string>
     <string name="content_name_tab_text" translatable="false">This is section of %1$s</string>
 
+    <!--Settings main-->
+    <string name="settings_my_profile">My Profile</string>
+    <string name="cd_settings_my_profile">To My Profile</string>
+    <string name="settings_information">Information</string>
+    <string name="cd_settings_information">To Information</string>
+    <string name="version_app">Version 1.0</string>
+
 </resources>

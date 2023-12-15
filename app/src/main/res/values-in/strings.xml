@@ -49,4 +49,9 @@
     <string name="fullname_hint">Nama Lengkap</string>
     <string name="address_hint">Alamat</string>
     <string name="contact_hint">Kontak</string>
+    <string name="settings_my_profile">Profil Saya</string>
+    <string name="cd_settings_my_profile">Pergi ke Profil Saya</string>
+    <string name="settings_information">Informasi</string>
+    <string name="cd_settings_information">Pergi ke Informasi</string>
+    <string name="version_app">Versi 1.0</string>
 </resources>
