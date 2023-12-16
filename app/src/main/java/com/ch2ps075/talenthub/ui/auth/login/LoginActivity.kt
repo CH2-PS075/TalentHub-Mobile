@@ -66,7 +66,9 @@ class LoginActivity : AppCompatActivity() {
                             UserModel(
                                 username = result.data.username,
                                 email = email,
-                                token = result.data.token
+                                token = result.data.token,
+                                contact = result.data.contact,
+                                address = result.data.address
                             )
                         )
                         showSuccessAlert()

@@ -69,9 +69,9 @@ class ProfileFragment : Fragment() {
             tvProfileEmail.text = resources.getString(R.string.email_profile, email)
         }
 
-        /*if (!user.isLogin) {
+        if (!user.isLogin) {
             showWarningAlert()
-        }*/
+        }
     }
 
     private fun showWarningAlert() {
