@@ -24,4 +24,25 @@ data class AuthResponse(
 
     @field:SerializedName("details")
     val details: String,
+
+    @field:SerializedName("talentName")
+    val talentName: String,
+
+    @field:SerializedName("quantity")
+    val quantity: String,
+
+    @field:SerializedName("quantity")
+    val price: String,
+
+    @field:SerializedName("identityCard")
+    val identityCard: String,
+
+    @field:SerializedName("isVerified")
+    val isVerified: Boolean,
+
+    @field:SerializedName("latitude")
+    val latitude: Double,
+
+    @field:SerializedName("longitude")
+    val longitude: Double,
 )
