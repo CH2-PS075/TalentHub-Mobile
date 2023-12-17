@@ -21,11 +21,19 @@
     <string name="login_subtitle_text">Login or register in just a few easy steps</string>
     <string name="email_hint" translatable="false">Email</string>
     <string name="invalid_email">The email format is invalid. Please enter a valid email address</string>
+
     <string name="username_hint">Username</string>
     <string name="fullname_hint">Full Name</string>
     <string name="address_hint">Address</string>
     <string name="contact_hint">Contact</string>
     <string name="password_hint">Password</string>
+
+    <string name="talentname_hint">Talent Name</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="price_hint">Price</string>
+    <string name="identitycard_hint">Profile Image</string>
+    <string name="identitycard_content_desc">Image Button</string>
+
     <string name="login_conditions_text">I agree to TalentHub\'s Terms of Service &amp; Privacy Policy.</string>
     <string name="signup_text">Don\'t have an account yet? Register</string>
     <string name="signin_text">Already have an account? Log in</string>
