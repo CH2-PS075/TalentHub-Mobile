@@ -49,6 +49,11 @@
     <string name="fullname_hint">Nama Lengkap</string>
     <string name="address_hint">Alamat</string>
     <string name="contact_hint">Kontak</string>
+    <string name="talentname_hint">Nama Talent</string>
+    <string name="quantity_hint">jumlah</string>
+    <string name="price_hint">Harga</string>
+    <string name="identitycard_hint">Gambar Profil</string>
+    <string name="identitycard_content_desc">Tombol Gambar</string>
     <string name="settings_my_profile">Profil Saya</string>
     <string name="cd_settings_my_profile">Pergi ke Profil Saya</string>
     <string name="settings_information">Informasi</string>
