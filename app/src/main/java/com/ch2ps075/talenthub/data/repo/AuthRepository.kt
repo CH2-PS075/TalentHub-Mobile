@@ -49,6 +49,29 @@ class AuthRepository private constructor(
         }
     }
 
+    fun registertalent(
+        talentName: String,
+        quantity: String,
+        address: String,
+        contact: String,
+        price: String,
+        identityCard: String,
+        email: String,
+        password: String,
+    ): LiveData<ResultState<Any>> {
+        return liveData {
+            emit(ResultState.Loading)
+            try {
+                val successResponse = apiService.registertalent(talentName, quantity, address, contact, price, identityCard, email, password, ).message
+                emit(ResultState.Success(successResponse))
+            } catch (e: HttpException) {
+                val jsonInString = e.response()?.errorBody()?.string()
+                val errorBody = Gson().fromJson(jsonInString, AuthResponse::class.java)
+                errorBody.message.let { ResultState.Error(it) }.let { emit(it) }
+            }
+        }
+    }
+
     fun login(
         email: String,
         password: String,
