@@ -60,6 +60,31 @@
         <item name="android:inputType">textPersonName</item>
     </style>
 
+<!--    RegisterTalent-->\
+    <style name="EditText.TalentName">
+        <item name="android:drawableStart">@drawable/ic_profile</item>
+        <item name="android:hint">@string/talentname_hint</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="EditText.Quantity">
+        <item name="android:drawableStart">@drawable/ic__numbers_24</item>
+        <item name="android:hint">@string/quantity_hint</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="EditText.Price">
+        <item name="android:drawableStart">@drawable/ic_outline_monetization_on_24</item>
+        <item name="android:hint">@string/price_hint</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="EditText.IdentityCard">
+        <item name="android:drawableStart">@drawable/ic_round_image_gray_24</item>
+        <item name="android:hint">@string/identitycard_hint</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
     <style name="EditText.Address">
         <item name="android:drawableStart">@drawable/ic_home</item>
         <item name="android:hint">@string/address_hint</item>
