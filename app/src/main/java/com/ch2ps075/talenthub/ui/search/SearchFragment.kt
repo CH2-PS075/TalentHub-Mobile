@@ -52,6 +52,21 @@ class SearchFragment : Fragment() {
                 false
             }
         }
+        setupMenu()
+    }
+
+    private fun setupMenu() {
+        binding.searchBar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.action_recommendation_search -> {
+                    val intent = Intent(requireActivity(), TalentRecommendationsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                else -> false
+            }
+        }
     }
 
     private fun showToast(message: String) {

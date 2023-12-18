@@ -70,4 +70,10 @@
     <string name="address_talent_detail">Lokasi Talent</string>
     <string name="portfolio_text_detail">Portofolio</string>
     <string name="portfolio_talent_detail">Tautan Portofolio Talent</string>
+    <string name="talent_recommendations_text">Rekomendasi Talent</string>
+    <string name="text_group_type">Tipe Grup</string>
+    <string name="text_price">Price</string>
+    <string name="text_location">Lokasi Saya</string>
+    <string name="recommend_me">Rekomendasikan Saya</string>
+    <string name="result_recommendation">Menampilkan hasil rekomendasi</string>
 </resources>

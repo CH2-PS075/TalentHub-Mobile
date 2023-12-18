@@ -84,6 +84,21 @@
     <style name="EditText.ProfileAddress">
         <item name="android:drawableStart">@drawable/ic_home</item>
     </style>
+
+    <style name="EditText.Category">
+        <item name="android:drawableStart">@drawable/outline_queue_music_24</item>
+        <item name="android:drawableTint">@color/colorDark</item>
+    </style>
+
+    <style name="EditText.GroupType">
+        <item name="android:drawableStart">@drawable/outline_group_24</item>
+        <item name="android:drawableTint">@color/colorDark</item>
+    </style>
+
+    <style name="EditText.Price">
+        <item name="android:drawableStart">@drawable/icon_price_idr</item>
+        <item name="android:drawableTint">@color/colorDark</item>
+    </style>
     <!--End of Style for EditText-->
 
     <!--Style for TextView-->

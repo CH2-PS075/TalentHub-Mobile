@@ -91,6 +91,36 @@
     <string name="rock_category">Rock</string>
     <string name="religi_category">Religi</string>
 
+    <!--Talent recommendations-->
+    <string name="talent_recommendations_text">Talent Recommendations</string>
+    <string name="cd_backto_search" translatable="false">Back to Search</string>
+    <string name="text_group_type">Group Type</string>
+    <string name="quantity_solo" translatable="false">Solo</string>
+    <string name="quantity_duo" translatable="false">Duo</string>
+    <string name="quantity_trio" translatable="false">Trio</string>
+    <string name="quantity_group" translatable="false">Group</string>
+    <string name="text_price">Price</string>
+    <string name="text_location">My Location</string>
+    <string name="recommend_me">Recommend Me</string>
+    <string name="result_recommendation">Showing result of recommendation</string>
+
+    <array name="category_titles">
+        <item>@string/tab_text_1</item>
+        <item>@string/tab_text_2</item>
+        <item>@string/tab_text_3</item>
+        <item>@string/tab_text_4</item>
+        <item>@string/tab_text_5</item>
+        <item>@string/tab_text_6</item>
+        <item>@string/tab_text_7</item>
+        <item>@string/tab_text_8</item>
+    </array>
+
+    <array name="group_type_titles">
+        <item>@string/quantity_solo</item>
+        <item>@string/quantity_duo</item>
+        <item>@string/quantity_trio</item>
+        <item>@string/quantity_group</item>
+    </array>
 
     <!--Error and success handling-->
     <string name="error_empty_field">Can not be empty</string>

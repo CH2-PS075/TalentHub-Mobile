@@ -13,7 +13,8 @@
         android:hint="@string/search_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/search_menu" />
 
     <com.google.android.material.search.SearchView
         android:id="@+id/search_view"
