@@ -140,4 +140,19 @@
     <string name="cd_settings_information">To Information</string>
     <string name="version_app">Version 1.0</string>
 
+    <!--Talent Detail page-->
+    <string name="cd_backto_home" translatable="false">Back to Home</string>
+    <string name="detail_talent_text">Talent Details</string>
+    <string name="contact_talent">Contact the Talent</string>
+    <string name="name_talent_detail">Name the Talent</string>
+    <string name="price_talent_detail">Rp000</string>
+    <string name="category_talent_detail">Genre</string>
+    <string name="quantity_talent_detail">Quantity</string>
+    <string name="description_text_detail">Description</string>
+    <string name="description_talent_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate, ligula ut consectetur gravida, mi nisl tempus massa, sit amet gravida urna nisi eu risus. Phasellus commodo non odio eu aliquam. Duis in posuere mi. Donec eleifend consequat leo, aliquam luctus eros fringilla vitae.</string>
+    <string name="address_text_detail">Address</string>
+    <string name="address_talent_detail">Location the Talent</string>
+    <string name="portfolio_text_detail">Portfolio</string>
+    <string name="portfolio_talent_detail">Link of the Talent Portfolio</string>
+
 </resources>

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TalentHub"
         tools:targetApi="31">
         <activity
+            android:name=".ui.detail.TalentDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.settings.InformationActivity"
             android:exported="false" />
         <activity

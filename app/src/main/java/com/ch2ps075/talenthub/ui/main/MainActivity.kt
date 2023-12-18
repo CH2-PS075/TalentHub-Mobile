@@ -1,6 +1,7 @@
 package com.ch2ps075.talenthub.ui.main
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,7 @@ import com.ch2ps075.talenthub.databinding.ActivityMainBinding
 import com.ch2ps075.talenthub.helper.LanguageUtil
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.ai.AiFragment
+import com.ch2ps075.talenthub.ui.detail.TalentDetailActivity
 import com.ch2ps075.talenthub.ui.favorite.FavoriteFragment
 import com.ch2ps075.talenthub.ui.home.HomeFragment
 import com.ch2ps075.talenthub.ui.profile.ProfileFragment
@@ -138,14 +140,14 @@ class MainActivity : AppCompatActivity() {
 
         actionGallery.setOnClickListener {
             dialog.dismiss()
-            Toast.makeText(this@MainActivity, "Gallery clicked", Toast.LENGTH_SHORT)
-                .show()
+            Toast.makeText(this@MainActivity, "Gallery clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, TalentDetailActivity::class.java))
         }
 
         actionCamera.setOnClickListener {
             dialog.dismiss()
-            Toast.makeText(this@MainActivity, "Camera clicked", Toast.LENGTH_SHORT)
-                .show()
+            Toast.makeText(this@MainActivity, "Camera clicked", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, TalentDetailActivity::class.java))
         }
 
         cancelButton.setOnClickListener { dialog.dismiss() }

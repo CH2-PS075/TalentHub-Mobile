@@ -16,7 +16,7 @@ interface ApiService {
     ): AuthResponse
 
     @FormUrlEncoded
-    @POST("auth/user/login")
+    @POST("auth/users/login")
     suspend fun login(
         @Field("email") email: String,
         @Field("password") password: String,

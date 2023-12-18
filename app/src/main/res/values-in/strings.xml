@@ -54,4 +54,16 @@
     <string name="settings_information">Informasi</string>
     <string name="cd_settings_information">Pergi ke Informasi</string>
     <string name="version_app">Versi 1.0</string>
+    <string name="detail_talent_text">Detail Talent</string>
+    <string name="contact_talent">Hubungi Talent</string>
+    <string name="name_talent_detail">Nama Talent</string>
+    <string name="price_talent_detail">Rp000</string>
+    <string name="category_talent_detail">Genre</string>
+    <string name="quantity_talent_detail">Quantity</string>
+    <string name="description_text_detail">Deskripsi</string>
+    <string name="description_talent_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate, ligula ut consectetur gravida, mi nisl tempus massa, sit amet gravida urna nisi eu risus. Phasellus commodo non odio eu aliquam. Duis in posuere mi. Donec eleifend consequat leo, aliquam luctus eros fringilla vitae.</string>
+    <string name="address_text_detail">Alamat</string>
+    <string name="address_talent_detail">Lokasi Talent</string>
+    <string name="portfolio_text_detail">Portofolio</string>
+    <string name="portfolio_talent_detail">Tautan Portofolio Talent</string>
 </resources>
