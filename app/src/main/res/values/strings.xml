@@ -76,16 +76,21 @@
     <string name="cd_backto_settings" translatable="false">Back to Settings</string>
 
     <!--Category-->
-    <string name="singer_category">Singer</string>
-    <string name="singer_cd" translatable="false">Singer</string>
-    <string name="music_band_category">Music Band</string>
-    <string name="music_band_cd" translatable="false">Music Band</string>
-    <string name="comedian_category">Comedian</string>
-    <string name="comedian_cd" translatable="false">Comedian</string>
-    <string name="photographer_category">Photographer</string>
-    <string name="photographer_cd" translatable="false">Photographer</string>
+    <string name="pop_category">Pop</string>
+    <string name="pop_cd" translatable="false">Pop Genre</string>
+    <string name="jazz_category">Jazz</string>
+    <string name="jazz_cd" translatable="false">Jazz Genre</string>
+    <string name="acoustic_category">Acoustic</string>
+    <string name="acoustic_cd" translatable="false">Acoustic Genre</string>
+    <string name="classic_category">Classic</string>
+    <string name="classic_cd" translatable="false">Classic Genre</string>
     <string name="view_all_category">View All</string>
     <string name="view_all_cd" translatable="false">View All</string>
+    <string name="hiphop_category">Hip Hop</string>
+    <string name="rb_category">R&amp;B</string>
+    <string name="rock_category">Rock</string>
+    <string name="religi_category">Religi</string>
+
 
     <!--Error and success handling-->
     <string name="error_empty_field">Can not be empty</string>
@@ -127,9 +132,14 @@
     <string name="cd_indonesia_selected" translatable="false">Selected Bahasa Indonesia</string>
 
     <!--Category Tab Layout-->
-    <string name="tab_text_1" translatable="false">Home</string>
-    <string name="tab_text_2" translatable="false">Profile</string>
-    <string name="tab_text_3" translatable="false">Setting</string>
+    <string name="tab_text_1" translatable="false">@string/classic_category</string>
+    <string name="tab_text_2" translatable="false">@string/jazz_category</string>
+    <string name="tab_text_3" translatable="false">@string/acoustic_category</string>
+    <string name="tab_text_4" translatable="false">@string/pop_category</string>
+    <string name="tab_text_5" translatable="false">@string/hiphop_category</string>
+    <string name="tab_text_6" translatable="false">@string/rb_category</string>
+    <string name="tab_text_7" translatable="false">@string/rock_category</string>
+    <string name="tab_text_8" translatable="false">@string/religi_category</string>
     <string name="content_tab_text" translatable="false">This is tab %1$d</string>
     <string name="content_name_tab_text" translatable="false">This is section of %1$s</string>
 

@@ -104,12 +104,14 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="12dp"
             android:layout_marginVertical="10dp"
+            android:baselineAligned="false"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title_category">
 
             <LinearLayout
+                android:id="@+id/classic_category"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -119,7 +121,7 @@
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/singer_cd"
+                    android:contentDescription="@string/classic_cd"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_singer_category" />
 
@@ -128,13 +130,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="@string/singer_category"
+                    android:text="@string/classic_category"
                     android:textAlignment="center"
                     android:textColor="@color/colorDark"
-                    android:textSize="10sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/jazz_category"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -144,9 +147,9 @@
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/singer_cd"
+                    android:contentDescription="@string/jazz_cd"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_musicband_category" />
+                    android:src="@drawable/ic_singer_category" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -154,13 +157,14 @@
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/montserrat_semibold"
                     android:maxLines="2"
-                    android:text="@string/music_band_category"
+                    android:text="@string/jazz_category"
                     android:textAlignment="center"
                     android:textColor="@color/colorDark"
-                    android:textSize="10sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/acoustic_category"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -170,22 +174,23 @@
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/singer_cd"
+                    android:contentDescription="@string/acoustic_cd"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_comedian_category" />
+                    android:src="@drawable/ic_singer_category" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="@string/comedian_category"
+                    android:text="@string/acoustic_category"
                     android:textAlignment="center"
                     android:textColor="@color/colorDark"
-                    android:textSize="10sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/pop_category"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
@@ -195,19 +200,19 @@
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/singer_cd"
+                    android:contentDescription="@string/pop_cd"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_photographer_category" />
+                    android:src="@drawable/ic_singer_category" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="@string/photographer_category"
+                    android:text="@string/pop_category"
                     android:textAlignment="center"
                     android:textColor="@color/colorDark"
-                    android:textSize="10sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -221,7 +226,7 @@
                     android:layout_width="55dp"
                     android:layout_height="55dp"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/singer_cd"
+                    android:contentDescription="@string/view_all_cd"
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_viewall_category" />
 
@@ -233,7 +238,7 @@
                     android:text="@string/view_all_category"
                     android:textAlignment="center"
                     android:textColor="@color/colorDark"
-                    android:textSize="10sp" />
+                    android:textSize="11sp" />
             </LinearLayout>
 
         </LinearLayout>

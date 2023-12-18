@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
         observeSession()
-        binding.viewAllCategory.setOnClickListener { startActivity(Intent(requireActivity(), CategoryActivity::class.java)) }
+        setupCategoryClickListeners()
     }
 
     private fun initRecyclerView() {
@@ -95,5 +95,29 @@ class HomeFragment : Fragment() {
             .setCancelButton(getString(R.string.back_title)) { it.dismissWithAnimation() }
             .apply { setCanceledOnTouchOutside(false) }
             .show()
+    }
+
+    private fun setCategoryClickListener(categoryId: Int) {
+        val intent = Intent(requireActivity(), CategoryActivity::class.java)
+        intent.putExtra(CATEGORY_ID, categoryId)
+        startActivity(intent)
+    }
+
+    private fun setupCategoryClickListeners() {
+        with(binding) {
+            classicCategory.setOnClickListener { setCategoryClickListener(CLASSIC_GENRE_ID) }
+            jazzCategory.setOnClickListener { setCategoryClickListener(JAZZ_GENRE_ID) }
+            acousticCategory.setOnClickListener { setCategoryClickListener(ACOUSTIC_GENRE_ID) }
+            popCategory.setOnClickListener { setCategoryClickListener(POP_GENRE_ID) }
+            viewAllCategory.setOnClickListener { startActivity(Intent(requireActivity(), CategoryActivity::class.java)) }
+        }
+    }
+
+    companion object {
+        const val CATEGORY_ID = "CATEGORY_ID"
+        const val CLASSIC_GENRE_ID = 0
+        const val JAZZ_GENRE_ID = 1
+        const val ACOUSTIC_GENRE_ID = 2
+        const val POP_GENRE_ID = 3
     }
 }
