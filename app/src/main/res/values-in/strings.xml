@@ -76,4 +76,7 @@
     <string name="text_location">Lokasi Saya</string>
     <string name="recommend_me">Rekomendasikan Saya</string>
     <string name="result_recommendation">Menampilkan hasil rekomendasi</string>
+    <string name="talent_help_desc">TalentBot siap membantu kamu</string>
+    <string name="type_message_text">Ketik pesan kamu</string>
+    <string name="welcome_chat_bot_text">Selamat datang di TalentHelp, ada yang bisa saya bantu hari ini?</string>
 </resources>

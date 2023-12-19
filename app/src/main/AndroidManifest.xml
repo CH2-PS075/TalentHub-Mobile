@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TalentHub"
         tools:targetApi="31">
         <activity
+            android:name=".ui.profile.chatbot.ChatBotActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.search.TalentRecommendationsActivity"
             android:exported="false" />
         <activity

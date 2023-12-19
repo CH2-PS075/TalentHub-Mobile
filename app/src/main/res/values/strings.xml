@@ -53,6 +53,15 @@
     <string name="name_profile" translatable="false">Hi, %1$s</string>
     <string name="email_profile" translatable="false">%1$s</string>
 
+    <string name="cd_chat_bot" translatable="false">Chat Bot icon</string>
+    <string name="chat_bot_text" translatable="false">Chat Bot</string>
+    <string name="cd_to_chat_bot" translatable="false">To Chat Bot</string>
+    <string name="welcome_chat_bot_text">Welcome to Talent Help, can I help you today?</string>
+    <string name="talent_help_text" translatable="false">Talent Help</string>
+    <string name="talent_help_desc">TalentBot is ready to help you</string>
+    <string name="type_message_text">Type your message</string>
+    <string name="button_send_message" translatable="false">Button send message</string>
+
     <string name="cd_help_center" translatable="false">Help Center icon</string>
     <string name="hc_text">Help Center</string>
     <string name="cd_to_hc" translatable="false">To Help Center</string>

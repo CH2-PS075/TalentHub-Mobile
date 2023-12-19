@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/left_chat_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/background_row_chat"
+        android:backgroundTint="@color/colorSecondary"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/left_chat_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="4dp"
+            android:textColor="@color/colorDark"
+            android:textSize="18sp"
+            tools:text="Typing...." />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_chat_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/background_row_chat"
+        android:backgroundTint="@color/colorPrimary"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/right_chat_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="4dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:text="How to register talent in this app?" />
+    </LinearLayout>
+
+</RelativeLayout>

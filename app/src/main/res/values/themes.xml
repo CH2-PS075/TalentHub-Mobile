@@ -99,6 +99,10 @@
         <item name="android:drawableStart">@drawable/icon_price_idr</item>
         <item name="android:drawableTint">@color/colorDark</item>
     </style>
+
+    <style name="EditText.Message">
+        <item name="android:backgroundTint">#EAEAEA</item>
+    </style>
     <!--End of Style for EditText-->
 
     <!--Style for TextView-->

@@ -1,17 +1,8 @@
 package com.ch2ps075.talenthub.ui.main
 
-import android.app.Dialog
-import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.MenuItem
-import android.view.ViewGroup
-import android.view.Window
-import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
@@ -22,8 +13,6 @@ import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.ActivityMainBinding
 import com.ch2ps075.talenthub.helper.LanguageUtil
 import com.ch2ps075.talenthub.ui.ViewModelFactory
-import com.ch2ps075.talenthub.ui.ai.AiFragment
-import com.ch2ps075.talenthub.ui.detail.TalentDetailActivity
 import com.ch2ps075.talenthub.ui.favorite.FavoriteFragment
 import com.ch2ps075.talenthub.ui.home.HomeFragment
 import com.ch2ps075.talenthub.ui.profile.ProfileFragment
@@ -53,7 +42,6 @@ class MainActivity : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
-        val aiFragment = AiFragment()
         val favoriteFragment = FavoriteFragment()
         val profileFragment = ProfileFragment()
 
@@ -84,8 +72,6 @@ class MainActivity : AppCompatActivity() {
                     binding.bottomNavigation.menu.findItem(R.id.action_profile)
                         ?.changeIcon(R.drawable.ic_profile)
                 }
-
-                R.id.action_ai -> setCurrentFragment(aiFragment).apply { showBottomDialog() }
 
                 R.id.action_favorite -> {
                     setCurrentFragment(favoriteFragment)
@@ -127,39 +113,6 @@ class MainActivity : AppCompatActivity() {
             addToBackStack(null)
             commit()
         }
-    }
-
-    private fun showBottomDialog() {
-        val dialog = Dialog(this)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_sheet_layout)
-
-        val actionGallery: LinearLayout = dialog.findViewById(R.id.action_gallery)
-        val actionCamera: LinearLayout = dialog.findViewById(R.id.action_camera)
-        val cancelButton: ImageView = dialog.findViewById(R.id.cancelButton)
-
-        actionGallery.setOnClickListener {
-            dialog.dismiss()
-            Toast.makeText(this@MainActivity, "Gallery clicked", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, TalentDetailActivity::class.java))
-        }
-
-        actionCamera.setOnClickListener {
-            dialog.dismiss()
-            Toast.makeText(this@MainActivity, "Camera clicked", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, TalentDetailActivity::class.java))
-        }
-
-        cancelButton.setOnClickListener { dialog.dismiss() }
-
-        dialog.show()
-        dialog.window?.setLayout(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.window?.attributes?.windowAnimations = R.style.DialogAnimation
-        dialog.window?.setGravity(Gravity.BOTTOM)
     }
 
     private fun MenuItem.changeIcon(drawableId: Int) {

@@ -17,6 +17,7 @@ import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
 import com.ch2ps075.talenthub.ui.main.MainActivity
 import com.ch2ps075.talenthub.ui.main.MainViewModel
+import com.ch2ps075.talenthub.ui.profile.chatbot.ChatBotActivity
 import com.ch2ps075.talenthub.ui.profile.helpcenter.HelpCenterActivity
 import com.ch2ps075.talenthub.ui.profile.language.LanguageActivity
 import com.ch2ps075.talenthub.ui.profile.privacy.PrivacyPolicyActivity
@@ -46,6 +47,7 @@ class ProfileFragment : Fragment() {
 
     private fun setupClickListeners() {
         with(binding) {
+            chatBot.setOnClickListener { startActivity(Intent(requireActivity(), ChatBotActivity::class.java)) }
             helpCenter.setOnClickListener { startActivity(Intent(requireActivity(), HelpCenterActivity::class.java)) }
             language.setOnClickListener { startActivity(Intent(requireActivity(), LanguageActivity::class.java)) }
             termsOfServices.setOnClickListener { startActivity(Intent(requireActivity(), TermsOfServicesActivity::class.java)) }
