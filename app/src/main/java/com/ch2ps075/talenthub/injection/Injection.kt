@@ -1,10 +1,12 @@
 package com.ch2ps075.talenthub.injection
 
 import android.content.Context
+import com.ch2ps075.talenthub.data.local.database.TalentDatabase
 import com.ch2ps075.talenthub.data.network.api.retrofit.ApiConfig
 import com.ch2ps075.talenthub.data.preference.UserPreference
 import com.ch2ps075.talenthub.data.preference.dataStore
 import com.ch2ps075.talenthub.data.repo.AuthRepository
+import com.ch2ps075.talenthub.data.repo.FavoriteTalentRepository
 import com.ch2ps075.talenthub.data.repo.TalentRepository
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
@@ -22,5 +24,10 @@ object Injection {
         val user = runBlocking { pref.getSession().first() }
         val apiService = ApiConfig.getApiService(user.token)
         return TalentRepository.getInstance(apiService)
+    }
+
+    fun provideFavoriteTalentRepository(context: Context): FavoriteTalentRepository {
+        val dao = TalentDatabase.getInstance(context).talentDao()
+        return FavoriteTalentRepository.getInstance(dao)
     }
 }

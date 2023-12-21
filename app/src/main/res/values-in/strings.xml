@@ -51,6 +51,7 @@
     <string name="logout_confirm_text">Apakah kamu yakin ingin keluar?</string>
     <string name="favorite_text">Talent Favorit</string>
     <string name="empty_favorite">Belum ada favorit</string>
+    <string name="empty_talent">Belum ada talent</string>
     <string name="fullname_hint">Nama Lengkap</string>
     <string name="address_hint">Alamat</string>
     <string name="contact_hint">Kontak</string>
@@ -80,4 +81,6 @@
     <string name="talent_help_desc">TalentBot siap membantu kamu</string>
     <string name="type_message_text">Ketik pesan kamu</string>
     <string name="welcome_chat_bot_text">Selamat datang di TalentHelp, ada yang bisa saya bantu hari ini?</string>
+    <string name="typing">Mengetik....</string>
+    <string name="not_successful">Tidak berhasil</string>
 </resources>

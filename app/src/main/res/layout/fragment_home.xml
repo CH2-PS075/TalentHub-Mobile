@@ -265,11 +265,40 @@
             android:layout_marginHorizontal="14dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="80dp"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title_our_talent"
             tools:listitem="@layout/item_row_talent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lotte_empty_talent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_our_talent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empty_favorite.json"
+            app:lottie_loop="true"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_empty_talent"
+            style="@style/TextView.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="@string/empty_talent"
+            android:textColor="@color/colorGray"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/lotte_empty_talent"
+            tools:visibility="visible" />
 
         <ProgressBar
             android:id="@+id/progressBar"

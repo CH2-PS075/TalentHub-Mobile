@@ -148,7 +148,7 @@ class SearchFragment : Fragment() {
 
     private fun showSelectedTalent(talent: Talent) {
         val intentToDetail = Intent(requireActivity(), TalentDetailActivity::class.java)
-        intentToDetail.putExtra(TALENT_ID, talent.talentId.toString())
+        intentToDetail.putExtra(TALENT_ID, talent.talentId)
         startActivity(intentToDetail)
     }
 

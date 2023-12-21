@@ -38,6 +38,7 @@
     <string name="join_talent">Join Now</string>
     <string name="text_category">Category</string>
     <string name="text_our_talent">Our Talent</string>
+    <string name="empty_talent">No Talents</string>
 
     <!--Search Page-->
     <string name="display_talent_size">Displaying %1$s talents</string>
@@ -204,5 +205,9 @@
     <string name="address_talent_detail">Location the Talent</string>
     <string name="portfolio_text_detail">Portfolio</string>
     <string name="portfolio_talent_detail">Link of the Talent Portfolio</string>
+
+    <!--Chat bot-->
+    <string name="typing">Typing....</string>
+    <string name="not_successful">Not successful</string>
 
 </resources>

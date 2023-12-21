@@ -1,7 +1,10 @@
 package com.ch2ps075.talenthub.data.network.api.retrofit
 
 import com.ch2ps075.talenthub.data.network.api.response.AuthResponse
+import com.ch2ps075.talenthub.data.network.api.response.BotResponse
+import com.ch2ps075.talenthub.data.network.api.response.ReqBody
 import com.ch2ps075.talenthub.data.network.api.response.Talent
+import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiService {
@@ -40,4 +43,10 @@ interface ApiService {
     suspend fun getDetailTalent(
         @Path("id") id: String
     ): Talent
+
+    @Headers("Content-Type: application/json")
+    @POST("users/send-message")
+    fun getBotResponse(
+        @Body request: ReqBody,
+    ): Call<BotResponse>
 }

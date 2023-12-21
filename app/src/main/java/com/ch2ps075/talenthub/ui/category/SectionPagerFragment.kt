@@ -85,7 +85,7 @@ class SectionPagerFragment : Fragment() {
 
     private fun showSelectedTalent(talent: Talent) {
         val intentToDetail = Intent(requireActivity(), TalentDetailActivity::class.java)
-        intentToDetail.putExtra(SearchFragment.TALENT_ID, talent.talentId.toString())
+        intentToDetail.putExtra(SearchFragment.TALENT_ID, talent.talentId)
         startActivity(intentToDetail)
     }
 
