@@ -31,6 +31,9 @@ data class Talent(
     @field:SerializedName("portfolio")
     val portfolio: String,
 
+    @field:SerializedName("description")
+    val description: String,
+
     @field:SerializedName("latitude")
     val latitude: Double,
 

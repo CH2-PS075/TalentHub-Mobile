@@ -44,6 +44,7 @@ class ChatBotActivity : AppCompatActivity() {
                     binding.edMessage.text.clear()
                     callApi(message)
                     binding.tvWelcomeChatBot.visibility = View.GONE
+                    binding.lottieChatBot.visibility = View.GONE
                 }
             }
         }

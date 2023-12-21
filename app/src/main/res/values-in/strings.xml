@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TalentHub</string>
+    <string name="welcome_greeting">Selamat datang di TalentHub! Kami senang Anda bergabung.</string>
     <string name="text_our_talent">Talent Kami</string>
     <string name="welomce_subtitle_text">Aplikasi yang membuat acara kamu lebih nyaman. Siap membantu kebutuhan kamu kapan saja, di mana saja.</string>
     <string name="welcome_register_text">Belum punya akun? Daftar dulu</string>
@@ -16,7 +17,7 @@
     <string name="login_conditions_text">Saya menyetujui Ketentuan Layanan &amp; Kebijakan Privasi TalentHub.</string>
     <string name="signup_text">Belum memiliki akun? Daftar</string>
     <string name="signin_text">Sudah memiliki akun? Masuk</string>
-    <string name="join_talent">Gabung Sekarang</string>
+    <string name="join_talent">Gabung</string>
     <string name="text_category">Kategori</string>
     <string name="display_talent_size">Menampilkan %1$s talent</string>
     <string name="display_talent_search">Hasil pencarian dari:  %1$s</string>
@@ -63,7 +64,7 @@
     <string name="detail_talent_text">Detail Talent</string>
     <string name="contact_talent">Hubungi Talent</string>
     <string name="name_talent_detail">Nama Talent</string>
-    <string name="price_talent_detail">Rp000</string>
+    <string name="price_talent_detail">Rp%1$s</string>
     <string name="category_talent_detail">Genre</string>
     <string name="quantity_talent_detail">Quantity</string>
     <string name="description_text_detail">Deskripsi</string>
@@ -131,4 +132,6 @@
     <string name="answer_5">Silakan menghubungi kami melalui email berikut talenthub@gmail.com</string>
     <string name="answer_6">Kamu tidak bisa mengubah email dan nomor telepon di aplikasi TalentHub untuk saat ini. Jika kamu memiliki email dan nomor telepon baru, silakan buat akun baru</string>
     <string name="answer_7">Kamu bisa menghubungi talent itu dengan cara masuk ke halaman detail, temukan tombol “Hubungi” kamu akan diarahkan ke WhatsApp dari talent tersebut</string>
+    <string name="empty_category">Tidak ada kategori yang tersedia saat ini. Periksa kembali nanti!</string>
+    <string name="empty_search">Tidak ada hasil yang ditemukan untuk pencarian kamu nih :( Coba kata kunci yang berbeda!</string>
 </resources>

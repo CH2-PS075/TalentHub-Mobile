@@ -91,7 +91,7 @@ class HomeFragment : Fragment() {
             layoutManager = mLayoutManager
             setHasFixedSize(true)
             adapter = talentAdapter
-            addItemDecoration(GridSpacingItemDecoration(2, 16, true))
+            addItemDecoration(GridSpacingItemDecoration(2, 8, true))
         }
 
         talentAdapter.setOnItemClickCallback(object : TalentAdapter.OnItemClickCallback {

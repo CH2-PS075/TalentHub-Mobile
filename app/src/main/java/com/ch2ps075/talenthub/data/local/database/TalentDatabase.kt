@@ -9,7 +9,7 @@ import com.ch2ps075.talenthub.data.local.database.entity.TalentEntity
 
 @Database(
     entities = [TalentEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class TalentDatabase : RoomDatabase() {
@@ -24,7 +24,9 @@ abstract class TalentDatabase : RoomDatabase() {
                 INSTANCE ?: Room.databaseBuilder(
                     context.applicationContext,
                     TalentDatabase::class.java, "db_favorite_talent"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
             }
     }
 }

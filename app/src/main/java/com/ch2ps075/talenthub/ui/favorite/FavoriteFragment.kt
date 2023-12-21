@@ -7,17 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.R
 import com.ch2ps075.talenthub.data.network.api.response.Talent
 import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.FragmentFavoriteBinding
-import com.ch2ps075.talenthub.helper.GridSpacingItemDecoration
 import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
-import com.ch2ps075.talenthub.ui.adapter.TalentAdapter
+import com.ch2ps075.talenthub.ui.adapter.HorizontalTalentAdapter
 import com.ch2ps075.talenthub.ui.detail.TalentDetailActivity
 import com.ch2ps075.talenthub.ui.main.MainActivity
 import com.ch2ps075.talenthub.ui.main.MainViewModel
@@ -26,7 +25,7 @@ import com.ch2ps075.talenthub.ui.search.SearchFragment
 class FavoriteFragment : Fragment() {
 
     private lateinit var binding: FragmentFavoriteBinding
-    private val talentAdapter = TalentAdapter()
+    private val talentAdapter = HorizontalTalentAdapter()
     private val viewModel by viewModels<MainViewModel> {
         ViewModelFactory.getInstance(requireContext(), LanguagePreferences.getInstance(requireContext().languageDataStore))
     }
@@ -61,6 +60,7 @@ class FavoriteFragment : Fragment() {
                     price = item.price,
                     picture = item.picture,
                     portfolio = item.portfolio,
+                    description = item.description,
                     latitude = item.latitude,
                     longitude = item.longitude
                 )
@@ -78,15 +78,14 @@ class FavoriteFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        val mLayoutManager = GridLayoutManager(requireContext(), 2)
+        val mLayoutManager = LinearLayoutManager(requireContext())
         binding.rvFavoriteTalent.apply {
             layoutManager = mLayoutManager
             setHasFixedSize(true)
             adapter = talentAdapter
-            addItemDecoration(GridSpacingItemDecoration(2, 8, false))
         }
 
-        talentAdapter.setOnItemClickCallback(object : TalentAdapter.OnItemClickCallback {
+        talentAdapter.setOnItemClickCallback(object : HorizontalTalentAdapter.OnItemClickCallback {
             override fun onItemClicked(talent: Talent) {
                 showSelectedTalent(talent)
             }

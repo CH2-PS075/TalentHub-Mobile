@@ -122,7 +122,11 @@ class MainActivity : AppCompatActivity() {
     private fun checkUserLogin() {
         mainViewModel.getSession().observe(this) { user ->
             if (user.isLogin) {
-                Toast.makeText(this, "Welcome to TalentHub!", Toast.LENGTH_SHORT).show()
+                mainViewModel.toastText.observe(this) { event ->
+                    event.getContentIfNotHandled()?.let { _ ->
+                        Toast.makeText(this, getString(R.string.welcome_greeting), Toast.LENGTH_LONG).show()
+                    }
+                }
             }
         }
     }

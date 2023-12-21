@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">TalentHub</string>
+    <string name="welcome_greeting">Welcome to TalentHub! We\'re excited to have you on board.</string>
     <string name="icon_bag" translatable="false">Icon of the TalentHub</string>
 
     <string name="action_home" translatable="false">Home</string>
@@ -39,11 +40,13 @@
     <string name="text_category">Category</string>
     <string name="text_our_talent">Our Talent</string>
     <string name="empty_talent">No Talents</string>
+    <string name="empty_category">No categories available at the moment. Check back later!</string>
 
     <!--Search Page-->
     <string name="display_talent_size">Displaying %1$s talents</string>
     <string name="display_talent_search">Search results of: %1$s</string>
     <string name="search_hint">Search talent…</string>
+    <string name="empty_search">No results found for your search. Try different keywords!</string>
 
     <!--Favorite Page-->
     <string name="favorite_text">Favorite Talent</string>
@@ -184,7 +187,7 @@
     <string name="answer_4">You can use one of the features in this application; you can find the feature on the "Search" page in the upper right corner, where there is an icon that you can click.</string>
     <string name="answer_5">Please contact us via the following email: talenthub@gmail.com.</string>
     <string name="answer_6">You cannot change your email and phone number in the TalentHub application for now. If you have a new email and phone number, please create a new account.</string>
-    <string name="answer_7">You can contact the talent by entering the details page, find the "\Contact"\ button, and you will be directed to the talent's WhatsApp.</string>
+    <string name="answer_7">You can contact the talent by entering the details page, find the \"Contact\" button, and you will be directed to the talent\'s WhatsApp.</string>
 
     <!--Language setting-->
     <string name="english_option" translatable="false">English</string>
@@ -216,7 +219,7 @@
     <string name="detail_talent_text">Talent Details</string>
     <string name="contact_talent">Contact the Talent</string>
     <string name="name_talent_detail">Name the Talent</string>
-    <string name="price_talent_detail">Rp000</string>
+    <string name="price_talent_detail">Rp%1$s</string>
     <string name="category_talent_detail">Genre</string>
     <string name="quantity_talent_detail">Quantity</string>
     <string name="description_text_detail">Description</string>

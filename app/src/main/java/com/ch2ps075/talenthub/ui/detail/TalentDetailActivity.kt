@@ -76,11 +76,11 @@ class TalentDetailActivity : AppCompatActivity() {
         with(binding) {
             ivDetailPhoto.loadImage(talent.picture)
             tvDetailName.text = talent.talentName
-            tvDetailPrice.text = talent.price.toString()
+            tvDetailPrice.text = getString(R.string.price_talent_detail, talent.price.toString())
             tvDetailCategory.text = talent.category
             tvDetailQuantity.text = talent.quantity
             tvDetailAddress.text = talent.address
-            tvDetailDescription.text = getString(R.string.welcome_conditions_text)
+            tvDetailDescription.text = talent.description
             tvDetailPortfolio.text = talent.portfolio
             contactTalentButton.setOnClickListener { showToast(talent.contact) }
             ivFavorite.setOnClickListener {
@@ -96,6 +96,7 @@ class TalentDetailActivity : AppCompatActivity() {
                     price = talent.price,
                     picture = talent.picture,
                     portfolio = talent.portfolio,
+                    description = talent.description,
                     latitude = talent.latitude,
                     longitude = talent.longitude
                 )

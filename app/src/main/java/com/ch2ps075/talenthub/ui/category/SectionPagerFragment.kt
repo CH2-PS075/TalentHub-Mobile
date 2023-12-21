@@ -7,15 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ch2ps075.talenthub.data.network.api.response.Talent
 import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.FragmentSectionPagerBinding
-import com.ch2ps075.talenthub.helper.GridSpacingItemDecoration
 import com.ch2ps075.talenthub.state.ResultState
 import com.ch2ps075.talenthub.ui.ViewModelFactory
-import com.ch2ps075.talenthub.ui.adapter.TalentAdapter
+import com.ch2ps075.talenthub.ui.adapter.HorizontalTalentAdapter
 import com.ch2ps075.talenthub.ui.detail.TalentDetailActivity
 import com.ch2ps075.talenthub.ui.home.HomeViewModel
 import com.ch2ps075.talenthub.ui.search.SearchFragment
@@ -23,7 +22,7 @@ import com.ch2ps075.talenthub.ui.search.SearchFragment
 class SectionPagerFragment : Fragment() {
 
     private lateinit var binding: FragmentSectionPagerBinding
-    private val talentAdapter = TalentAdapter()
+    private val talentAdapter = HorizontalTalentAdapter()
     private val homeViewModel by viewModels<HomeViewModel> {
         ViewModelFactory.getInstance(requireContext(), LanguagePreferences.getInstance(requireContext().languageDataStore))
     }
@@ -43,7 +42,7 @@ class SectionPagerFragment : Fragment() {
     }
 
     private fun observeTalents() {
-        val categoryName = arguments?.getString(ARG_CATEGORY_NAME, "Category")
+        val categoryName = arguments?.getString(ARG_CATEGORY_NAME, "")
         if (categoryName != null) {
             homeViewModel.getTalentsByCategory(categoryName).observe(requireActivity()) { result ->
                 if (result != null) {
@@ -53,9 +52,15 @@ class SectionPagerFragment : Fragment() {
                         }
 
                         is ResultState.Success -> {
-                            initRecyclerView()
-                            showTalents(result.data)
-                            showLoading(false)
+                            if (result.data.isEmpty()) {
+                                showLoading(false)
+                                binding.lottieEmptyCategory.visibility = View.VISIBLE
+                                binding.tvEmptyCategory.visibility = View.VISIBLE
+                            } else {
+                                initRecyclerView()
+                                showTalents(result.data)
+                                showLoading(false)
+                            }
                         }
 
                         is ResultState.Error -> {
@@ -68,15 +73,14 @@ class SectionPagerFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        val mLayoutManager = GridLayoutManager(requireContext(), 2)
+        val mLayoutManager = LinearLayoutManager(requireContext())
         binding.rvTalentPager.apply {
             layoutManager = mLayoutManager
             setHasFixedSize(true)
             adapter = talentAdapter
-            addItemDecoration(GridSpacingItemDecoration(2, 16, true))
         }
 
-        talentAdapter.setOnItemClickCallback(object : TalentAdapter.OnItemClickCallback {
+        talentAdapter.setOnItemClickCallback(object : HorizontalTalentAdapter.OnItemClickCallback {
             override fun onItemClicked(talent: Talent) {
                 showSelectedTalent(talent)
             }

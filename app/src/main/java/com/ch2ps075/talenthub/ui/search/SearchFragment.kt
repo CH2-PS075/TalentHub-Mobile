@@ -67,13 +67,19 @@ class SearchFragment : Fragment() {
                     }
 
                     is ResultState.Success -> {
-                        initRecyclerView()
-                        showTalents(result.data)
-                        showLoading(false)
-                        binding.tvTalentSize.text = getString(
-                            R.string.display_talent_size,
-                            result.data.size.toString()
-                        )
+                        if (result.data.isEmpty()) {
+                            showLoading(false)
+                            binding.lottieEmptySearch.visibility = View.VISIBLE
+                            binding.tvEmptySearch.visibility = View.VISIBLE
+                        } else {
+                            initRecyclerView()
+                            showTalents(result.data)
+                            showLoading(false)
+                            binding.tvTalentSize.text = getString(
+                                R.string.display_talent_size,
+                                result.data.size.toString()
+                            )
+                        }
                     }
 
                     is ResultState.Error -> {
@@ -100,13 +106,26 @@ class SearchFragment : Fragment() {
                             }
 
                             is ResultState.Success -> {
-                                initRecyclerView()
-                                showTalents(result.data)
-                                showLoading(false)
-                                binding.tvTalentSize.text = getString(
-                                    R.string.display_talent_size,
-                                    result.data.size.toString()
-                                )
+                                if (result.data.isEmpty()) {
+                                    showLoading(false)
+                                    binding.lottieEmptySearch.visibility = View.VISIBLE
+                                    binding.tvEmptySearch.visibility = View.VISIBLE
+                                    binding.rvTalentSearch.visibility = View.INVISIBLE
+                                    binding.tvTalentSize.text = getString(
+                                        R.string.display_talent_size,
+                                        result.data.size.toString()
+                                    )
+                                } else {
+                                    initRecyclerView()
+                                    showTalents(result.data)
+                                    showLoading(false)
+                                    binding.lottieEmptySearch.visibility = View.INVISIBLE
+                                    binding.tvEmptySearch.visibility = View.INVISIBLE
+                                    binding.tvTalentSize.text = getString(
+                                        R.string.display_talent_size,
+                                        result.data.size.toString()
+                                    )
+                                }
                             }
 
                             is ResultState.Error -> {
