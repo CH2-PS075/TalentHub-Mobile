@@ -5,19 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.category.SectionPagerFragment">
 
-    <TextView
-        android:id="@+id/section_label"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_talent_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/content_tab_text" />
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/section_name"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/content_name_tab_text" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center" />
 
 </FrameLayout>

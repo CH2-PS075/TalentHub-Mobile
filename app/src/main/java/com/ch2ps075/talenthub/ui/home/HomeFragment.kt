@@ -10,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ch2ps075.talenthub.R
+import com.ch2ps075.talenthub.data.network.api.response.Talent
 import com.ch2ps075.talenthub.ui.adapter.TalentAdapter
-import com.ch2ps075.talenthub.data.local.Talent
 import com.ch2ps075.talenthub.data.preference.LanguagePreferences
 import com.ch2ps075.talenthub.data.preference.languageDataStore
 import com.ch2ps075.talenthub.databinding.FragmentHomeBinding
@@ -19,8 +19,11 @@ import com.ch2ps075.talenthub.ui.ViewModelFactory
 import com.ch2ps075.talenthub.ui.WelcomeActivity
 import com.ch2ps075.talenthub.ui.auth.login.LoginActivity
 import com.ch2ps075.talenthub.helper.GridSpacingItemDecoration
+import com.ch2ps075.talenthub.state.ResultState
 import com.ch2ps075.talenthub.ui.category.CategoryActivity
+import com.ch2ps075.talenthub.ui.detail.TalentDetailActivity
 import com.ch2ps075.talenthub.ui.main.MainViewModel
+import com.ch2ps075.talenthub.ui.search.SearchFragment
 
 class HomeFragment : Fragment() {
 
@@ -29,41 +32,77 @@ class HomeFragment : Fragment() {
     private val viewModel by viewModels<MainViewModel> {
         ViewModelFactory.getInstance(requireContext(), LanguagePreferences.getInstance(requireContext().languageDataStore))
     }
+    private val homeViewModel by viewModels<HomeViewModel> {
+        ViewModelFactory.getInstance(requireContext(), LanguagePreferences.getInstance(requireContext().languageDataStore))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+        initRecyclerView()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initRecyclerView()
         observeSession()
         setupCategoryClickListeners()
+        observeTalents()
+    }
+
+    private fun observeTalents() {
+        homeViewModel.getTalents().observe(requireActivity()) { result ->
+            if (result != null) {
+                when (result) {
+                    is ResultState.Loading -> {
+                        showLoading(true)
+                    }
+
+                    is ResultState.Success -> {
+                        initRecyclerView()
+                        showTalents(result.data)
+                        showLoading(false)
+                    }
+
+                    is ResultState.Error -> {
+                        showLoading(false)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun showTalents(listTalents: List<Talent>) {
+        if (listTalents.isNotEmpty()) {
+            binding.rvTalents.visibility = View.VISIBLE
+            talentAdapter.submitList(listTalents)
+        } else {
+            binding.rvTalents.visibility = View.INVISIBLE
+        }
     }
 
     private fun initRecyclerView() {
-        val dataItems = listOf(
-            Talent(1, "John Doe", "Singer", "Bekasi, Indonesia", "https://i.imgur.com/oYqwuI0.png"),
-            Talent(2, "Jane Smith", "Dancer", "Tangerang, Indonesia", "https://i.imgur.com/oYqwuI0.png"),
-            Talent(3, "David Johnson", "Actor", "Depok, Indonesia", "https://i.imgur.com/oYqwuI0.png"),
-            Talent(4, "Sarah Williams", "Musician", "Bandung, Indonesia", "https://i.imgur.com/oYqwuI0.png"),
-            Talent(5, "Michael Brown", "Comedian", "Bali, Indonesia", "https://i.imgur.com/oYqwuI0.png"),
-            Talent(6, "Emily Davis", "Painter", "Jakarta, Indonesia", "https://i.imgur.com/oYqwuI0.png")
-        )
-
         val mLayoutManager = GridLayoutManager(requireContext(), 2)
-
         binding.rvTalents.apply {
             layoutManager = mLayoutManager
+            setHasFixedSize(true)
             adapter = talentAdapter
             addItemDecoration(GridSpacingItemDecoration(2, 16, true))
         }
 
-        talentAdapter.submitList(dataItems)
+        talentAdapter.setOnItemClickCallback(object : TalentAdapter.OnItemClickCallback {
+            override fun onItemClicked(talent: Talent) {
+                showSelectedTalent(talent)
+            }
+        })
+    }
+
+    private fun showSelectedTalent(talent: Talent) {
+        val intentToDetail = Intent(requireActivity(), TalentDetailActivity::class.java)
+        intentToDetail.putExtra(SearchFragment.TALENT_ID, talent.talentId.toString())
+        startActivity(intentToDetail)
     }
 
     private fun observeSession() {
@@ -111,6 +150,10 @@ class HomeFragment : Fragment() {
             popCategory.setOnClickListener { setCategoryClickListener(POP_GENRE_ID) }
             viewAllCategory.setOnClickListener { startActivity(Intent(requireActivity(), CategoryActivity::class.java)) }
         }
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     companion object {

@@ -41,6 +41,7 @@
 
     <!--Search Page-->
     <string name="display_talent_size">Displaying %1$s talents</string>
+    <string name="display_talent_search">Search results of: %1$s</string>
     <string name="search_hint">Search talent…</string>
 
     <!--Favorite Page-->

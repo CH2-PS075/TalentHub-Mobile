@@ -19,6 +19,7 @@
     <string name="join_talent">Gabung Sekarang</string>
     <string name="text_category">Kategori</string>
     <string name="display_talent_size">Menampilkan %1$s talent</string>
+    <string name="display_talent_search">Hasil pencarian dari:  %1$s</string>
     <string name="language_text">Pengaturan Bahasa</string>
     <string name="error_empty_field">Tidak boleh kosong</string>
     <string name="error_short_password">Kata sandi tidak boleh kurang dari 8 karakter</string>

@@ -64,7 +64,6 @@ class AuthRepository private constructor(
         }
     }
 
-
     companion object {
         @Volatile
         private var instance: AuthRepository? = null

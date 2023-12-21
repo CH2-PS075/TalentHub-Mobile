@@ -65,7 +65,7 @@ class FavoriteFragment : Fragment() {
             binding.tvEmptyFavorite.visibility = View.VISIBLE
             binding.lottieEmptyFavorite.visibility = View.VISIBLE
         } else {
-            talentAdapter.submitList(dataItems)
+            //talentAdapter.submitList(dataItems)
         }
     }
 
