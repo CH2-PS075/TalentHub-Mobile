@@ -22,8 +22,8 @@ class HelpCenterActivity : AppCompatActivity() {
     }
 
     private fun getListQuestion(): ArrayList<Question> {
-        val titleQuestion = resources.getStringArray(R.array.question_data)
-        val answerQuestion = resources.getStringArray(R.array.answer_data)
+        val titleQuestion = resources.getStringArray(R.array.question_help_center)
+        val answerQuestion = resources.getStringArray(R.array.answer_help_center)
         val listQuestion = ArrayList<Question>()
         for (i in titleQuestion.indices) {
             val question = Question(titleQuestion[i], answerQuestion[i])

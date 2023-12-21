@@ -150,21 +150,41 @@
     <string name="logout_confirm_text">Are you sure you want to logout?</string>
 
     <!--Help center-->
-    <string-array name="question_data">
-        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
-        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
-        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
-        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
-        <item>Bagaimana saya bisa mendaftar sebagai Talent di TalentHub?</item>
+    <string-array name="question_help_center">
+        <item>@string/question_1</item>
+        <item>@string/question_2</item>
+        <item>@string/question_3</item>
+        <item>@string/question_4</item>
+        <item>@string/question_5</item>
+        <item>@string/question_6</item>
+        <item>@string/question_7</item>
     </string-array>
 
-    <string-array name="answer_data">
-        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
-        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
-        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
-        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
-        <item>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</item>
+    <string name="question_1">How can I register as a talent on TalentHub?</string>
+    <string name="question_2">What are the requirements to register as a talent on TalentHub?</string>
+    <string name="question_3">Is there any fee associated with becoming a talent on TalentHub?</string>
+    <string name="question_4">How can I get recommendations for talents that match my preferences?</string>
+    <string name="question_5">Who should I contact if I have further questions?</string>
+    <string name="question_6">Can I change my email and phone number in this application?</string>
+    <string name="question_7">If I find a suitable talent, how can I inquire and contact that talent?</string>
+
+    <string-array name="answer_help_center">
+        <item>@string/answer_1</item>
+        <item>@string/answer_2</item>
+        <item>@string/answer_3</item>
+        <item>@string/answer_4</item>
+        <item>@string/answer_5</item>
+        <item>@string/answer_6</item>
+        <item>@string/answer_7</item>
     </string-array>
+
+    <string name="answer_1">If you want to join as part of TalentHub Partner, you can register through the TalentHub for Talent application.</string>
+    <string name="answer_2">You only need to fill in personal information, such as address, name, contact, pricing, and you are also required to upload your original photo.</string>
+    <string name="answer_3">For now, you can register for free.</string>
+    <string name="answer_4">You can use one of the features in this application; you can find the feature on the "Search" page in the upper right corner, where there is an icon that you can click.</string>
+    <string name="answer_5">Please contact us via the following email: talenthub@gmail.com.</string>
+    <string name="answer_6">You cannot change your email and phone number in the TalentHub application for now. If you have a new email and phone number, please create a new account.</string>
+    <string name="answer_7">You can contact the talent by entering the details page, find the "\Contact"\ button, and you will be directed to the talent's WhatsApp.</string>
 
     <!--Language setting-->
     <string name="english_option" translatable="false">English</string>
@@ -210,4 +230,41 @@
     <string name="typing">Typing....</string>
     <string name="not_successful">Not successful</string>
 
+    <!--ToS Page-->
+    <string name="tos_1">Welcome to TalentHub! Please read carefully our terms of service before using our app.</string>
+    <string name="tos_2">1. Acceptance of Terms and Conditions:</string>
+    <string name="tos_3">By accessing or using the TalentHub app, you are deemed to accept and agree to all the terms and conditions contained here.</string>
+    <string name="tos_4">2. Application Use:</string>
+    <string name="tos_5">TalentHub may only be used for personal and non-commercial purposes. Any use in violation of this provision may result in termination of access.</string>
+    <string name="tos_6">3. User Accounts:</string>
+    <string name="tos_7">You are responsible for your account information and must keep your password secure. Any activity associated with your account is your responsibility.</string>
+    <string name="tos_8">4. Vendor and Talent Options:</string>
+    <string name="tos_9">We are not responsible for the services or products provided by the vendors or talents you select through our application. The decision to work with a vendor or talent is entirely your responsibility.</string>
+    <string name="tos_10">5. Intellectual Property Rights:</string>
+    <string name="tos_11">TalentHub and all of its content is either owned by us or licensed to us. Unauthorized use of such material may violate intellectual property rights.</string>
+    <string name="tos_12">6. Change and Termination of Service:</string>
+    <string name="tos_13">We reserve the right to change, suspend, or discontinue our services at any time without prior notice. We are not liable for any loss or impact arising from such changes.</string>
+    <string name="tos_14">7. Approval of Changes:</string>
+    <string name="tos_15">Continued use of the app following changes to the terms of service is deemed to be your agreement to such changes.</string>
+    <string name="tos_16">8. Applicable Laws:</string>
+    <string name="tos_17">These terms of service are governed by and interpreted in accordance with applicable law.</string>
+
+    <!--Privacy Policy Page-->
+    <string name="pp_1">Welcome to TalentHub\'s Privacy Policy! We highly value your privacy and are committed to protecting it.</string>
+    <string name="pp_2">1. The Information We Collect:</string>
+    <string name="pp_3">We may collect personal information such as name, email address, and other account information necessary for the use of the app.</string>
+    <string name="pp_4">2. Use of Information:</string>
+    <string name="pp_5">The information we collect is used to provide services, improve user experience, and send updates or related information.</string>
+    <string name="pp_6">3. Information Sharing:</string>
+    <string name="pp_7">We will not rent or sell your personal information to third parties. Information may be shared with your chosen vendor or talent for transaction purposes.</string>
+    <string name="pp_8">4. Data Security:</string>
+    <string name="pp_9">We use physical and electronic security measures to protect user personal information. However, no system is completely risk-free.</string>
+    <string name="pp_10">5. Cookies and Similar Technologies:</string>
+    <string name="pp_11">We use cookies and similar technologies to improve user experience. You can manage your cookie preferences through your browser settings.</string>
+    <string name="pp_12">6. Your Rights:</string>
+    <string name="pp_13">You have the right to access, update or delete your personal information. Contact us if you have any privacy-related questions or requests.</string>
+    <string name="pp_14">7. Privacy Policy Changes:</string>
+    <string name="pp_15">This privacy policy may be updated from time to time. Notice will be given of any significant changes.</string>
+    <string name="pp_16">8. Contact Us:</string>
+    <string name="pp_17">If you have any questions or concerns about privacy, please contact us at talenthub@gmail.com</string>
 </resources>
