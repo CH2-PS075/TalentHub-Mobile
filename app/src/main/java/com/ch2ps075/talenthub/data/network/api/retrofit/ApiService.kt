@@ -44,6 +44,16 @@ interface ApiService {
         @Path("id") id: String
     ): Talent
 
+    @FormUrlEncoded
+    @POST("talents/recommendation")
+    suspend fun getRecommendationTalents(
+        @Field("latitude") latitude: Double,
+        @Field("longitude") longitude: Double,
+        @Field("price") price: Int,
+        @Field("category") category: String,
+        @Field("quantity") quantity: String,
+    ): AuthResponse //coba
+
     @Headers("Content-Type: application/json")
     @POST("users/send-message")
     fun getBotResponse(

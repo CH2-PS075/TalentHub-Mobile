@@ -49,6 +49,22 @@ class TalentRepository private constructor(
         }
     }
 
+    fun getRecommendationTalents(
+        latitude: Double,
+        longitude: Double,
+        price: Int,
+        category: String,
+        quantity: String,
+    ) = liveData {
+        emit(ResultState.Loading)
+        try {
+            val request = apiService.getRecommendationTalents(latitude, longitude, price, category, quantity)
+            emit(ResultState.Success(request))
+        } catch (e: HttpException) {
+            e.printStackTrace()
+        }
+    }
+
     companion object {
         @Volatile
         private var instance: TalentRepository? = null

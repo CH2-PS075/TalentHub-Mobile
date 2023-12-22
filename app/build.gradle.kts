@@ -82,6 +82,10 @@ dependencies {
     implementation("com.github.f0ris.sweetalert:library:1.6.2")
     implementation("com.airbnb.android:lottie:6.2.0")
 
+    // Google Play Service Location
+    implementation ("com.google.android.gms:play-services-maps:18.2.0")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+
     // Unit testing
     testImplementation("junit:junit:4.13.2")
 

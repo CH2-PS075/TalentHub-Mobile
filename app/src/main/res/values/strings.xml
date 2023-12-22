@@ -136,6 +136,25 @@
         <item>@string/quantity_group</item>
     </array>
 
+    <!--Category and group type-->
+    <array name="category_titles_recc">
+        <item>Klasik</item>
+        <item>Jazz"</item>
+        <item>Akustik"</item>
+        <item>Pop</item>
+        <item>Hip Hop</item>
+        <item>R&amp;B</item>
+        <item>Rock</item>
+        <item>Religi</item>
+        <item>Dangdut</item>
+    </array>
+
+    <array name="group_type_titles_recc">
+        <item>single</item>
+        <item>duo</item>
+        <item>group</item>
+    </array>
+
     <!--Error and success handling-->
     <string name="error_empty_field">Can not be empty</string>
     <string name="error_short_password">Password must not be less than 8 characters</string>
@@ -270,4 +289,7 @@
     <string name="pp_15">This privacy policy may be updated from time to time. Notice will be given of any significant changes.</string>
     <string name="pp_16">8. Contact Us:</string>
     <string name="pp_17">If you have any questions or concerns about privacy, please contact us at talenthub@gmail.com</string>
+    <string name="url_invalid">Invalid URL</string>
+    <string name="required_category_grouptype">Select the category and group type</string>
+    <string name="location_checklist" translatable="false">Location must be checklist</string>
 </resources>

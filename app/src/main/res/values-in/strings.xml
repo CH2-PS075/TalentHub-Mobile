@@ -134,4 +134,6 @@
     <string name="answer_7">Kamu bisa menghubungi talent itu dengan cara masuk ke halaman detail, temukan tombol “Hubungi” kamu akan diarahkan ke WhatsApp dari talent tersebut</string>
     <string name="empty_category">Tidak ada kategori yang tersedia saat ini. Periksa kembali nanti!</string>
     <string name="empty_search">Tidak ada hasil yang ditemukan untuk pencarian kamu nih :( Coba kata kunci yang berbeda!</string>
+    <string name="url_invalid">URL tidak valid</string>
+    <string name="required_category_grouptype">Pilih kategori dan jenis grup</string>
 </resources>
